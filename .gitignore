@@ -1,0 +1,286 @@
+# ================================
+# Operating System Files
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# ================================
+# IDE and Editor Files
+# ================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Eclipse
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.project
+.classpath
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ================================
+# Dependency Directories
+# ================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# Ruby
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PHP
+/vendor/
+composer.lock
+
+# ================================
+# Build Output
+# ================================
+
+# General
+/dist/
+/build/
+/out/
+/target/
+*.tsbuildinfo
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# ================================
+# Environment Files
+# ================================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# ================================
+# Logs
+# ================================
+
+logs/
+*.log
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ================================
+# Runtime Data
+# ================================
+
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ================================
+# Coverage Reports
+# ================================
+
+coverage/
+*.lcov
+.nyc_output
+
+# ================================
+# Dependency Management
+# ================================
+
+# Yarn
+.yarn/
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.pnp.*
+
+# ================================
+# Package Manager Files
+# ================================
+
+package-lock.json
+yarn.lock
+
+# ================================
+# Temporary Files
+# ================================
+
+*.tmp
+*.temp
+*.log
+.tmp/
+.temp/
+
+# ================================
+# Database
+# ================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ================================
+# Media Files (if not tracking)
+# ================================
+
+# Uncomment if you don't want to track media files
+# *.mp4
+# *.mp3
+# *.wav
+# *.ogg
+# *.mov
+# *.avi
+
+# ================================
+# SSL/TLS Certificates
+# ================================
+
+*.key
+*.pem
+*.crt
+*.csr
+
+# ================================
+# macOS Spotlight
+# ================================
+
+.DS_Store?
+._*
+
+# ================================
+# Windows Installer Files
+# ================================
+
+*.cab
+*.msi
+*.msm
+*.msp
+
+# ================================
+# Project Specific
+# ================================
+
+# Web development
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# Testing
+/coverage/
+/test-results/
+
+# ================================
+# Git
+# ================================
+
+# Git internal files
+.git/
+*.orig
+
+# ================================
+# Project Specific
+# ================================
+
+# Drafts folder (content ignored, but folder structure preserved)
+/drafts/
+
+# ================================
+# Misc
+# ================================
+
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Keep empty directories
+!.gitkeep

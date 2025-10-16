@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ber.earth - Blog</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/utilities.css" />
+        <link href="https://github.com/bergutman" rel="me" />
+    </head>
+    <body class="bg-brown-paper bg-repeat text-black blog-page">
+        <div
+            class="relative max-w-900 m-t-0 m-r-a m-b-0 m-l-a bg-matzo bg-repeat border-double"
+        >
+            <header
+                class="relative p-t-0 p-r-20 p-b-80 p-l-20 text-center bg-chinese bg-repeat"
+            >
+                <!-- Marquee -->
+                <div class="marquee-container">
+                    <div class="marquee">
+                        <span
+                            >★✰✮ Please leave a comment! ✮✰★ &nbsp;&nbsp; ★✰✮
+                            Tell me what you think of my site! ✮✰★ &nbsp;&nbsp;
+                            ★✰✮ Don't forget to sign the guestbook! ✮✰★</span
+                        >
+                    </div>
+                </div>
+                <img class="logo" src="img/logos/blog.png" />
+                <div
+                    class="fixed inline-block pinned-top pinned-right bg-contain bg-center bg-no-repeat pen"
+                ></div>
+            </header>
+            <nav
+                class="bg-faded-paper bg-repeat border-top-double border-bottom-double"
+            >
+                <input type="checkbox" id="nav-toggle" class="hidden" />
+                <label for="nav-toggle" class="nav-toggle-label">Menu</label>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li>
+                            <a
+                                class="bg-text bg-repeat border-black"
+                                href="index.html"
+                            >
+                                <img src="img/bullets/dolph.gif" /> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="bg-text bg-repeat border-black"
+                                href="bio.html"
+                            >
+                                <img src="img/bullets/jewish.gif" /> Bio
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="bg-text bg-repeat border-black"
+                                href="pics.html"
+                            >
+                                <img src="img/bullets/smilei.gif" /> Pics
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="bg-text bg-repeat border-black"
+                                href="blog.html"
+                            >
+                                <img src="img/bullets/hotlist.gif" /> Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                class="bg-text bg-repeat border-black"
+                                href="guestbook.html"
+                            >
+                                <img src="img/bullets/gbook.gif" /> Guestbook
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="flex flex-col p-15">
+                <div
+                    class="flex-1 p-20 bg-cardboard bg-repeat border-dark text-black border-ridge"
+                >
+                    <div
+                        class="flex-1 p-15 m-t-50 bg-ruled-paper-header border-dark text-black border-top-ridge border-right-ridge border-left-ridge border-black"
+                    >
+                        <img
+                            class="absolute left-0 right-0 m-h-a m-t--55"
+                            src="img/clipart/tape.png"
+                        />
+                        <h2 class="text-center m-t-50"></h2>
+                    </div>
+                    <div
+                        class="flex-1 p-15 bg-ruled-paper border-dark text-black border-right-ridge border-left-ridge border-black"
+                    >
+                        <article>
+                            <p>
+                                Good vibrations and welcome to my own personal
+                                echo chamber! Consider this place a petri dish
+                                full of woke mind viruses. Stick
+                                around too long and you might just catch my
+                                rather contagious drift. Below, you’ll find a live culture of my latest obsessions—unsolicited manifestos on environmentalism, frantic notes from my losing
+                                                                battle with modern technology, and the general
+                                                                musings of a brain that's a little too rotted.
+                                                                It’s all served up with a heavy dose of
+                                                                self-awareness and a heaping side of cringe.
+                                <br /><br />
+If you have a weakened humor system, pre-existing conditions such as extreme bias and/or donkey brain, or have ever had an allergic reaction to Judaism, please consult with a narcissistic Twitch streamer before consuming any of my unpasteurized thoughts. Side effects may include the sudden urge to
+                                install Linux, a deep-seated distrust of modern
+                                agriculture, and the nagging feeling that this
+                                whole "Anthropocene" thing may have been a bad
+                                idea. <br /><br />Lastly, be sure to F5 often, as I'm always
+                                cultivating something new!
+                                <br /><br />
+                                Hugs and kisses,
+                                <br/><br/>
+                                -Ber
+                                <br /><br />
+                                P.S. For those who like to pre-screen their content for ideological purity, I've constructed the following political compass to save you the trouble of actually having to read anything:
+                                <br /><br /><br/>
+                            <h3 class="text-center m-r-50">✨ Ber's Political Compass ✨</h3>
+                                <div class="political-compass-container">
+                                    <canvas id="politicalCompass" width="600" height="600"></canvas>
+                                </div>
+                            </p>
+                        </article>
+                    </div>
+                    <div class="flex-1 p-15 m-b-50 bg-ruled-paper-header border-dark text-black border-bottom-ridge border-right-ridge border-left-ridge border-black">
+                                            <h2 class="text-center m-t-50"></h2>
+                                        </div>
+                    <div class="grid grid-2 gap-30 m-t-15 m-b-15">
+                        <!-- Blog Post 1 -->
+                        <a
+                            href="posts/nuclear.html"
+                            class="block m-b-20 p-25 p-t-30 no-decoration text-inherit bg-sticky-yellow border-solid raised tilted-reverse"
+                        >
+                            <img
+                                class="absolute left-0 right-0 m-h-a m-t--30"
+                                src="img/bullets/purplepush.gif"
+                            />
+                            <div class="blog-post-title block m-b-10">
+                                <h2 class="no-decoration">
+                                    <i class="fas fa-radiation"></i> Nuclear
+                                    fucking sucks
+                                </h2>
+                            </div>
+                            <div class="flex justify-space-between m-b-10">
+                                <span>
+                                    <i class="fas fa-calendar"></i> October 16,
+                                    2025
+                                </span>
+                                <span>
+                                    <i class="fas fa-comment"></i>
+                                    <span
+                                        class="comment-count"
+                                        data-post-id="nuclear"
+                                        >0 Comments</span
+                                    >
+                                </span>
+                            </div>
+                            <div class="m-b-10 lh-1-5">
+                                <p>
+                                    I’ve watched—with growing concern—a
+                                    troubling paradigm shift take hold in
+                                    climate discourse: the sudden rehabilitation
+                                    of nuclear energy as an environmentalist
+                                    dark horse. Once a taboo subject, nuclear
+                                    power is now being framed as a misunderstood
+                                    savior, a necessary compromise in the
+                                    desperate scramble to cut emissions...
+                                </p>
+                            </div>
+                            <div class="blog-post-categories">
+                                <span class="blog-category">
+                                    <i class="fas fa-plug"></i> Energy
+                                </span>
+                                <span class="blog-category">
+                                    <i class="fas fa-earth-america"></i>
+                                    Climate Change
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Blog Post 2 -->
+                        <a
+                            href="posts/nuclear.html"
+                            class="block m-b-20 p-25 p-t-30 no-decoration text-inherit bg-sticky-orange border-solid raised tilted"
+                        >
+                            <img
+                                class="absolute left-0 right-0 m-h-a m-t--30"
+                                src="img/bullets/bluepush.gif"
+                            />
+                            <div class="blog-post-title block m-b-10">
+                                <h2 class="no-decoration">
+                                    <i class="fas fa-radiation"></i> Do
+                                    (((They))) Control the Government?
+                                </h2>
+                            </div>
+                            <div class="flex justify-space-between m-b-10">
+                                <span>
+                                    <i class="fas fa-calendar"></i> October 16,
+                                    2025
+                                </span>
+                                <span>
+                                    <i class="fas fa-comment"></i>
+                                    <span
+                                        class="comment-count"
+                                        data-post-id="nuclear"
+                                        >0 Comments</span
+                                    >
+                                </span>
+                            </div>
+                            <div class="m-b-10 lh-1-5">
+                                <p>
+                                    I’ve watched—with growing concern—a
+                                    troubling paradigm shift take hold in
+                                    climate discourse: the sudden rehabilitation
+                                    of nuclear energy as an environmentalist
+                                    dark horse. Once a taboo subject, nuclear
+                                    power is now being framed as a misunderstood
+                                    savior, a necessary compromise in the
+                                    desperate scramble to cut emissions...
+                                </p>
+                            </div>
+                            <div class="blog-post-categories">
+                                <span class="blog-category">
+                                    <i class="fas fa-plug"></i> Energy
+                                </span>
+                                <span class="blog-category">
+                                    <i class="fas fa-earth-america"></i>
+                                    Climate Change
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Blog Post 3 -->
+                        <a
+                            href="posts/nuclear.html"
+                            class="block m-b-20 p-25 p-t-30 no-decoration text-inherit bg-sticky-pink border-solid raised tilted-reverse"
+                        >
+                            <img
+                                class="absolute left-0 right-0 m-h-a m-t--30"
+                                src="img/bullets/greenpush.gif"
+                            />
+                            <div class="blog-post-title block m-b-10">
+                                <h2 class="no-decoration">
+                                    <i class="fas fa-radiation"></i> All Gas No
+                                    Brakes
+                                </h2>
+                            </div>
+                            <div class="flex justify-space-between m-b-10">
+                                <span>
+                                    <i class="fas fa-calendar"></i> October 16,
+                                    2025
+                                </span>
+                                <span>
+                                    <i class="fas fa-comment"></i>
+                                    <span
+                                        class="comment-count"
+                                        data-post-id="nuclear"
+                                        >0 Comments</span
+                                    >
+                                </span>
+                            </div>
+                            <div class="m-b-10 lh-1-5">
+                                <p>
+                                    I’ve watched—with growing concern—a
+                                    troubling paradigm shift take hold in
+                                    climate discourse: the sudden rehabilitation
+                                    of nuclear energy as an environmentalist
+                                    dark horse. Once a taboo subject, nuclear
+                                    power is now being framed as a misunderstood
+                                    savior, a necessary compromise in the
+                                    desperate scramble to cut emissions...
+                                </p>
+                            </div>
+                            <div class="blog-post-categories">
+                                <span class="blog-category">
+                                    <i class="fas fa-plug"></i> Energy
+                                </span>
+                                <span class="blog-category">
+                                    <i class="fas fa-earth-america"></i>
+                                    Climate Change
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Blog Post 4 -->
+                        <a
+                            href="posts/nuclear.html"
+                            class="block m-b-20 p-25 p-t-30 no-decoration text-inherit bg-sticky-blue border-solid raised tilted"
+                        >
+                            <img
+                                class="absolute left-0 right-0 m-h-a m-t--30"
+                                src="img/bullets/orangepush.gif"
+                            />
+                            <div class="blog-post-title block m-b-10">
+                                <h2 class="no-decoration">
+                                    <i class="fas fa-radiation"></i> The Bund's
+                                    Greatest Mistake
+                                </h2>
+                            </div>
+                            <div class="flex justify-space-between m-b-10">
+                                <span>
+                                    <i class="fas fa-calendar"></i> October 16,
+                                    2025
+                                </span>
+                                <span>
+                                    <i class="fas fa-comment"></i>
+                                    <span
+                                        class="comment-count"
+                                        data-post-id="nuclear"
+                                        >0 Comments</span
+                                    >
+                                </span>
+                            </div>
+                            <div class="m-b-10 lh-1-5">
+                                <p>
+                                    I’ve watched—with growing concern—a
+                                    troubling paradigm shift take hold in
+                                    climate discourse: the sudden rehabilitation
+                                    of nuclear energy as an environmentalist
+                                    dark horse. Once a taboo subject, nuclear
+                                    power is now being framed as a misunderstood
+                                    savior, a necessary compromise in the
+                                    desperate scramble to cut emissions...
+                                </p>
+                            </div>
+                            <div class="blog-post-categories">
+                                <span class="blog-category">
+                                    <i class="fas fa-plug"></i> Energy
+                                </span>
+                                <span class="blog-category">
+                                    <i class="fas fa-earth-america"></i>
+                                    Climate Change
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Blog Post 5 -->
+                        <a
+                            href="posts/nuclear.html"
+                            class="block m-b-20 p-25 p-t-30 no-decoration text-inherit bg-sticky-green border-solid raised tilted-reverse"
+                        >
+                            <img
+                                class="absolute left-0 right-0 m-h-a m-t--30"
+                                src="img/bullets/redpush.gif"
+                            />
+                            <div class="blog-post-title block m-b-10">
+                                <h2 class="no-decoration">
+                                    <i class="fas fa-radiation"></i> Welcome to
+                                    Costco, I love you
+                                </h2>
+                            </div>
+                            <div class="flex justify-space-between m-b-10">
+                                <span>
+                                    <i class="fas fa-calendar"></i> October 16,
+                                    2025
+                                </span>
+                                <span>
+                                    <i class="fas fa-comment"></i>
+                                    <span
+                                        class="comment-count"
+                                        data-post-id="nuclear"
+                                        >0 Comments</span
+                                    >
+                                </span>
+                            </div>
+                            <div class="m-b-10 lh-1-5">
+                                <p>
+                                    I’ve watched—with growing concern—a
+                                    troubling paradigm shift take hold in
+                                    climate discourse: the sudden rehabilitation
+                                    of nuclear energy as an environmentalist
+                                    dark horse. Once a taboo subject, nuclear
+                                    power is now being framed as a misunderstood
+                                    savior, a necessary compromise in the
+                                    desperate scramble to cut emissions...
+                                </p>
+                            </div>
+                            <div class="blog-post-categories">
+                                <span class="blog-category">
+                                    <i class="fas fa-plug"></i> Energy
+                                </span>
+                                <span class="blog-category">
+                                    <i class="fas fa-earth-america"></i>
+                                    Climate Change
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Blog Post 6 -->
+                        <a
+                            href="posts/nuclear.html"
+                            class="block m-b-20 p-25 p-t-30 no-decoration text-inherit bg-sticky-yellow border-solid raised tilted"
+                        >
+                            <img
+                                class="absolute left-0 right-0 m-h-a m-t--30"
+                                src="img/bullets/purplepush.gif"
+                            />
+                            <div class="blog-post-title block m-b-10">
+                                <h2 class="no-decoration">
+                                    <i class="fas fa-radiation"></i> Five cents,
+                                    please.
+                                </h2>
+                            </div>
+                            <div class="flex justify-space-between m-b-10">
+                                <span>
+                                    <i class="fas fa-calendar"></i> October 16,
+                                    2025
+                                </span>
+                                <span>
+                                    <i class="fas fa-comment"></i>
+                                    <span
+                                        class="comment-count"
+                                        data-post-id="nuclear"
+                                        >0 Comments</span
+                                    >
+                                </span>
+                            </div>
+                            <div class="m-b-10 lh-1-5">
+                                <p>
+                                    I’ve watched—with growing concern—a
+                                    troubling paradigm shift take hold in
+                                    climate discourse: the sudden rehabilitation
+                                    of nuclear energy as an environmentalist
+                                    dark horse. Once a taboo subject, nuclear
+                                    power is now being framed as a misunderstood
+                                    savior, a necessary compromise in the
+                                    desperate scramble to cut emissions...
+                                </p>
+                            </div>
+                            <div class="blog-post-categories">
+                                <span class="blog-category">
+                                    <i class="fas fa-plug"></i> Energy
+                                </span>
+                                <span class="blog-category">
+                                    <i class="fas fa-earth-america"></i>
+                                    Climate Change
+                                </span>
+                            </div>
+                        </a>
+                        <!-- Blog Post 7 -->
+                        <a
+                            href="posts/nuclear.html"
+                            class="block m-b-20 p-25 p-t-30 no-decoration text-inherit bg-sticky-orange border-solid raised tilted-reverse"
+                        >
+                            <img
+                                class="absolute left-0 right-0 m-h-a m-t--30"
+                                src="img/bullets/bluepush.gif"
+                            />
+                            <div class="blog-post-title block m-b-10">
+                                <h2 class="no-decoration">
+                                    <i class="fas fa-radiation"></i> On Zionism
+                                    & Anal Sex
+                                </h2>
+                            </div>
+                            <div class="flex justify-space-between m-b-10">
+                                <span>
+                                    <i class="fas fa-calendar"></i> October 16,
+                                    2025
+                                </span>
+                                <span>
+                                    <i class="fas fa-comment"></i>
+                                    <span
+                                        class="comment-count"
+                                        data-post-id="nuclear"
+                                        >0 Comments</span
+                                    >
+                                </span>
+                            </div>
+                            <div class="m-b-10 lh-1-5">
+                                <p>
+                                    I’ve watched—with growing concern—a
+                                    troubling paradigm shift take hold in
+                                    climate discourse: the sudden rehabilitation
+                                    of nuclear energy as an environmentalist
+                                    dark horse. Once a taboo subject, nuclear
+                                    power is now being framed as a misunderstood
+                                    savior, a necessary compromise in the
+                                    desperate scramble to cut emissions...
+                                </p>
+                            </div>
+                            <div class="blog-post-categories">
+                                <span class="blog-category">
+                                    <i class="fas fa-plug"></i> Energy
+                                </span>
+                                <span class="blog-category">
+                                    <i class="fas fa-earth-america"></i>
+                                    Climate Change
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="m-v-65 p-15 text-center">
+                <img
+                    src="img/clipart/bearring.gif"
+                    alt="Cool Homepages Webring"
+                />
+                <p>
+                    <a href="#" class="retro-button">Previous Site</a>
+                    <a href="#" class="retro-button">Random Site</a>
+                    <a href="#" class="retro-button">Next Site</a>
+                </p>
+            </div>
+            <footer
+                class="p-15 text-center bg-white-paper bg-repeat border-top-double"
+            >
+                <img src="img/clipart/pythhead.gif" />
+                <p>Copyright is for weenies lol.</p>
+                <p>
+                    <a class="text-inherit" href="mailto:bergutman@pm.me"
+                        >Email</a
+                    >
+                    |
+                    <a
+                        class="text-inherit"
+                        href="https://github.com/bergutman"
+                        target="_blank"
+                        >GitHub</a
+                    >
+                    |
+                    <a
+                        class="text-inherit"
+                        href="https://www.youtube.com/@bluetoothtoilet"
+                        target="_blank"
+                        >YouTube</a
+                    >
+                </p>
+                <p style="font-size: 0.8rem; margin-top: 5px">
+                    Last Updated: October 16, 2025
+                </p>
+                <!-- Badges -->
+                <div class="p-15 text-center">
+                    <div class="badge m-5">
+                        <img src="img/badges/gnu_linux.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/anarchy.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/start_legalize2.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/gay.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/free_speech.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/valid-html40.png" />
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/comment-counts.js"></script>
+        <script src="js/blog-graph.js"></script>
+    </body>
+</html>

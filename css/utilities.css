@@ -1,0 +1,1320 @@
+/* --- Alignment & Display --- */
+.block {
+    display: block;
+}
+.fixed {
+    position: fixed;
+}
+.absolute {
+    position: absolute;
+}
+.left-0 {
+    left: 0;
+}
+.right-0 {
+    right: 0;
+}
+.flex {
+    display: flex;
+}
+.flex-1 {
+    flex: 1;
+}
+.flex-col {
+    flex-direction: column;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.gap-15 {
+    gap: 15px;
+}
+.gap-30 {
+    gap: 30px;
+}
+.grid {
+    display: grid;
+}
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+.inline-block {
+    display: inline-block;
+}
+.items-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-space-between {
+    justify-content: space-between;
+}
+.pinned-right {
+    right: 35px;
+}
+.pinned-top {
+    top: 30px;
+}
+.relative {
+    position: relative;
+}
+
+/* --- Background --- */
+.bg-center {
+    background-position: center;
+}
+.bg-contain {
+    background-size: contain;
+}
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+.bg-repeat {
+    background-repeat: repeat;
+}
+.bg-repeat-x {
+    background-repeat: repeat-x;
+}
+
+/* --- Border Types --- */
+
+.border-bottom-double {
+    border-bottom: 6px double var(--background-black);
+}
+.border-bottom-ridge {
+    border-bottom: 3px ridge var(--background-black);
+}
+.border-double {
+    border: 6px double var(--background-black);
+}
+.border-groove {
+    border: 3px groove var(--background-black);
+}
+.border-left-ridge {
+    border-left: 3px ridge var(--background-black);
+}
+.border-outset {
+    border: 2px outset var(--background-black);
+}
+.border-outset-thick {
+    border: 3px outset var(--background-black);
+}
+.border-ridge {
+    border: 3px ridge var(--background-black);
+}
+.border-right-ridge {
+    border-right: 3px ridge var(--background-black);
+}
+.border-solid {
+    border: 3px solid var(--background-black);
+}
+.border-solid-thick {
+    border: 5px solid var(--background-black);
+}
+.border-solid-thin {
+    border: 1px solid var(--background-black);
+}
+.border-top-double {
+    border-top: 6px double var(--background-black);
+}
+.border-top-ridge {
+    border-top: 3px ridge var(--background-black);
+}
+
+/* --- Border Colors --- */
+
+.border-black {
+    border-color: black;
+}
+.border-blue {
+    border-color: var(--electric-blue);
+}
+.border-brown {
+    border-color: var(--background-brown);
+}
+.border-dark {
+    border-color: var(--background-dark);
+}
+.border-green {
+    border-color: var(--lime-green);
+}
+.border-pink {
+    border-color: var(--neon-pink);
+}
+.border-purple {
+    border-color: var(--deep-purple);
+}
+.border-red {
+    border-color: var(--blood-red);
+}
+.border-white {
+    border-color: #fff;
+}
+.border-yellow {
+    border-color: var(--sun-yellow);
+}
+.rainbow-footer-hack {
+    margin: 2px;
+}
+.border-single-rainbow {
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    border-image-slice: 1;
+}
+.border-rainbow {
+    background-color: #ccc;
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    border-image-slice: 1;
+}
+
+.border-rainbow-hack::before {
+    background: none;
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+            to right,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            indigo,
+            violet
+        )
+        1;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    pointer-events: none;
+}
+
+.border-rainbow-footer {
+    background-color: #ccc;
+    border: 2px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+    border-image-slice: 1;
+}
+.border-rainbow-footer::before {
+    background: none;
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(
+            to right,
+            red,
+            orange,
+            yellow,
+            green,
+            blue,
+            indigo,
+            violet
+        )
+        1;
+    content: "";
+    display: block;
+    pointer-events: none;
+    margin: -21px -15px 0 -15px;
+}
+
+.nav-inner {
+    margin: -2px -2px;
+    padding: 0 2px;
+}
+
+.nav-inner-inner {
+    margin: 2px -4px;
+}
+
+.nav-inner-inner ul {
+    padding: 10px;
+}
+
+.home-footer-hack {
+    padding-top: 21px;
+}
+
+/* --- Sizing --- */
+.w-auto {
+    width: auto;
+}
+.w-100 {
+    width: 100%;
+}
+.w-100px {
+    width: 100px;
+}
+.w-30 {
+    width: 30%;
+}
+
+.min-w-180 {
+    min-width: 180px;
+}
+.max-w-900 {
+    max-width: 900px;
+}
+
+.h-auto {
+    height: auto;
+}
+.h-100 {
+    height: 100%;
+}
+.h-100-vh {
+    height: 100vh;
+}
+.mh-30 {
+    min-height: 30px;
+}
+
+/* --- Margins --- */
+.m-t--55 {
+    margin-top: -55px;
+}
+.m-t--30 {
+    margin-top: -30px;
+}
+.m-0 {
+    margin: 0;
+}
+.m-t-0 {
+    margin-top: 0;
+}
+.m-r-0 {
+    margin-right: 0;
+}
+.m-b-0 {
+    margin-bottom: 0;
+}
+.m-l-0 {
+    margin-left: 0;
+}
+.m-a {
+    margin: auto;
+}
+.m-h-a {
+    margin-left: auto;
+    margin-right: auto;
+}
+.m-t-a {
+    margin-top: auto;
+}
+.m-r-a {
+    margin-right: auto;
+}
+.m-b-a {
+    margin-bottom: auto;
+}
+.m-l-a {
+    margin-left: auto;
+}
+.m-5 {
+    margin: 5px;
+}
+.m-t-5 {
+    margin-top: 5px;
+}
+.m-r-5 {
+    margin-right: 5px;
+}
+.m-b-5 {
+    margin-bottom: 5px;
+}
+.m-l-5 {
+    margin-left: 5px;
+}
+.m-t-10 {
+    margin-top: 10px;
+}
+.m-r-10 {
+    margin-right: 10px;
+}
+.m-b-10 {
+    margin-bottom: 10px;
+}
+.m-l-10 {
+    margin-left: 10px;
+}
+.m-15 {
+    margin: 15px;
+}
+.m-t-15 {
+    margin-top: 15px;
+}
+.m-r-15 {
+    margin-right: 15px;
+}
+.m-b-15 {
+    margin-bottom: 15px;
+}
+.m-l-15 {
+    margin-left: 15px;
+}
+.m-20 {
+    margin: 20px;
+}
+.m-t-20 {
+    margin-top: 20px;
+}
+.m-b-20 {
+    margin-bottom: 20px;
+}
+.m-b-22 {
+    margin-bottom: 22px;
+}
+.m-b-50 {
+    margin-bottom: 50px;
+}
+.m-r-50 {
+    margin-right: 50px;
+}
+.m-r-20 {
+    margin-right: 20px;
+}
+.m-t-30 {
+    margin-top: 30px;
+}
+.m-t-30 {
+    margin-top: 30px;
+}
+.m-t-50 {
+    margin-top: 50px;
+}
+.m-t-75 {
+    margin-top: 75px;
+}
+.m-v-65 {
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+/* --- Paddings --- */
+.p-5 {
+    padding: 5px;
+}
+.p-10 {
+    padding: 10px;
+}
+.p-15 {
+    padding: 15px;
+}
+.p-20 {
+    padding: 20px;
+}
+.p-25 {
+    padding: 25px;
+}
+
+.p-t-0 {
+    padding-top: 0;
+}
+.p-r-0 {
+    padding-right: 0;
+}
+.p-b-0 {
+    padding-bottom: 0;
+}
+.p-l-0 {
+    padding-left: 0;
+}
+
+.p-t-20 {
+    padding-top: 20px;
+}
+.p-r-20 {
+    padding-right: 20px;
+}
+.p-b-20 {
+    padding-bottom: 20px;
+}
+.p-l-20 {
+    padding-left: 20px;
+}
+.p-t-30 {
+    padding-top: 30px;
+}
+
+.p-t-80 {
+    padding-top: 80px;
+}
+.p-r-80 {
+    padding-right: 80px;
+}
+.p-b-80 {
+    padding-bottom: 80px;
+}
+.p-l-80 {
+    padding-left: 80px;
+}
+
+/* --- Text Formatting --- */
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+    text-align: justify;
+}
+.no-decoration {
+    text-decoration: none;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-shadow {
+    text-shadow: 1px 1px 0 black;
+}
+.lh-1-5 {
+    line-height: 1.5;
+}
+/* --- Text Sizes --- */
+.text-xs {
+    font-size: 0.8rem;
+}
+/* --- Text Colors --- */
+.text-black {
+    color: black;
+}
+.text-white {
+    color: white;
+}
+.text-inherit {
+    color: inherit;
+}
+.text-black .marquee {
+    color: white;
+}
+.text-brown {
+    color: var(--background-brown);
+}
+.text-dark {
+    color: var(--background-dark);
+}
+.text-pink {
+    color: var(--neon-pink);
+}
+.text-green {
+    color: var(--lime-green);
+}
+.text-yellow {
+    color: var(--sun-yellow);
+}
+
+.bg-white {
+    background-color: #fff;
+}
+.bg-black {
+    background-color: #000;
+}
+.bg-pink {
+    background-color: var(--neon-pink);
+}
+.bg-yellow {
+    background-color: var(--sun-yellow);
+}
+.bg-purple {
+    background-color: var(--deep-purple);
+}
+.bg-red {
+    background-color: var(--blood-red);
+}
+.bg-green {
+    background-color: var(--lime-green);
+}
+.bg-sticky-yellow {
+    background-color: #f1f58f;
+}
+.bg-sticky-orange {
+    background-color: #ffa930;
+}
+.bg-sticky-pink {
+    background-color: #ff32b2;
+}
+.bg-sticky-blue {
+    background-color: #a9edf1;
+}
+.bg-sticky-green {
+    background-color: #74ed4b;
+}
+.bg-lightning {
+    background: url("../img/tiles/light.jpg");
+}
+.bg-cardboard {
+    background-image: url("../img/tiles/cardbd.jpg");
+}
+.bg-ocean {
+    background-image: url("../img/tiles/strand.jpg");
+}
+.bg-feet {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        url("../img/tiles/bgfeet.gif");
+}
+.bg-cloudy {
+    background-image: url("../img/tiles/bgsuncloud.jpg");
+}
+.bg-sunset {
+    background: url("../img/tiles/bgsunset.jpg");
+}
+
+.bg-pines {
+    background-image: url("../img/tiles/bgpinetrees.gif");
+}
+.bg-wood {
+    background-image: url("../img/tiles/wood.jpg");
+}
+.bg-wood-alt {
+    background-image: url("../img/tiles/wood2.jpg");
+}
+
+.bg-mountain {
+    background-image: url("../img/tiles/mountain.gif");
+}
+
+.bg-matzo {
+    background-image: url("../img/tiles/matzo.gif");
+}
+
+.bg-chinese {
+    background-image: url("../img/tiles/bgchinese.gif");
+}
+
+.bg-jungle-paper {
+    background-image: url("../img/tiles/jungle.gif");
+}
+
+.bg-jungle-paper-alt {
+    background-image: url("../img/tiles/junglepap1.jpg");
+}
+
+.bg-jungle-animals {
+    background-image: url("../img/clipart/bigpost.jpg");
+}
+
+.bg-shells {
+    background: url("../img/tiles/bgshells.gif");
+}
+.bg-shadow {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.bg-stars {
+    background: url("../img/tiles/stars.gif");
+}
+.bg-marijuana {
+    background: url("../img/tiles/starfeil.gif");
+}
+.bg-shobu {
+    background: url("../img/tiles/bgshobu.jpg");
+}
+.bg-white-paper {
+    background: url("../img/tiles/whitepaper.gif");
+}
+.bg-smiley {
+    background: url("../img/tiles/bgsmiley2.gif");
+}
+.bg-smiley-animated {
+    background: url("../img/tiles/smileys03.gif");
+}
+.bg-parrots {
+    background: url("../img/tiles/bgparrots.gif");
+}
+.bg-waterfall {
+    background: url("../img/tiles/waterfall.jpg");
+}
+.bg-jesus {
+    background: url("../img/tiles/bgjesus.jpg");
+}
+.bg-village {
+    background-image: url("../img/tiles/bgoz.gif");
+}
+.bg-grass {
+    background: url("../img/tiles/grass.gif");
+}
+.bg-slime {
+    background: url("../img/tiles/bgM003.gif");
+}
+.bg-ivy {
+    background: url("../img/tiles/ivy.jpg");
+}
+.bg-fern {
+    background: url("../img/tiles/fern.gif");
+}
+.bg-leaves {
+    background: url("../img/tiles/leaves2.gif");
+}
+.bg-turquoise {
+    background: url("../img/tiles/0.jpg");
+}
+.bg-blue-swirl {
+    background: url("../img/tiles/1w.jpg");
+}
+.bg-brown-paper {
+    background: url("../img/tiles/paper.jpg");
+}
+.bg-water-bright {
+    background: url("../img/tiles/bgblue.png");
+}
+.bg-beach-from-above {
+    background:
+        linear-gradient(rgba(0, 0, 51, 0.6), rgba(0, 0, 51, 0.6)),
+        url("../img/tiles/b_fly_02.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+}
+.bg-concha {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+        url("../img/tiles/concha.gif");
+    background-repeat: repeat;
+    background-size: contain;
+}
+.bg-ruled-paper {
+    background: url("../img/tiles/ruledpaper.gif");
+    padding: 19px 15px 15px 23%;
+}
+.bg-ruled-paper-header {
+    background: url("../img/tiles/ruledpaper-top.gif");
+    padding: 19px 15px 15px 23%;
+}
+.bg-smoky-leaves {
+    background: url("../img/tiles/bgcoleaves.jpg");
+}
+.bg-shore {
+    background: url("../img/tiles/b_fly_02.jpg");
+    background-size: 100% 100%;
+}
+.bg-indian-pattern {
+    background: url("../img/tiles/indian_bk.gif");
+}
+.bg-coffee-plant {
+    background: url("../img/tiles/coffeeplant.jpg");
+}
+.bg-flag-paper {
+    background: url("../img/tiles/flagpaper.jpg");
+}
+.bg-water {
+    background: url("../img/tiles/water.jpg");
+}
+.bg-super-nova {
+    background: url("../img/tiles/bg_index.jpg");
+    background-position: center;
+    background-size: contain;
+}
+.bg-seashore {
+    background-image: url("../img/tiles/seashore.gif");
+}
+.bg-blue-star-paper {
+    background: url("../img/tiles/t5.gif");
+}
+.bg-dolphins {
+    background: url("../img/tiles/dolphins.jpg");
+}
+.bg-sand {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+        url("../img/tiles/sand_bkg.jpg");
+}
+.bg-sand-alt {
+    background: url("../img/tiles/bgbeach4.gif");
+    background-size: contain;
+    background-repeat: repeat;
+}
+.bg-green-sand {
+    background: url("../img/tiles/sand.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+}
+.bg-orchid {
+    background: url("../img/tiles/orchid12.jpg");
+}
+.bg-rainbow-paper {
+    background: url("../img/tiles/qnet-bg.gif");
+}
+.bg-pastel-paper {
+    background: url("../img/tiles/pastelpap.jpg");
+}
+.bg-black-smoke {
+    background: url("../img/tiles/bgblacksmoke.jpg");
+}
+.bg-gold-bars {
+    background: url("../img/tiles/goldbarpattern.png");
+}
+.bg-steel-cones {
+    background: url("../img/tiles/bgsteelcones.gif");
+}
+.bg-hearts {
+    background: url("../img/tiles/bgcolhearts2.gif");
+}
+.bg-beanie-babies {
+    background: url("../img/tiles/bgbeanies.gif");
+}
+.bg-purple {
+    background: url("../img/tiles/purple.gif");
+}
+.bg-teddy {
+    background-image: url("../img/tiles/bgteddy.jpg");
+}
+.bg-bass {
+    background: url("../img/tiles/bass.gif");
+    background-repeat: repeat;
+    background-size: 40%;
+}
+.bg-bears {
+    background-image: url("../img/tiles/bgteddy.gif");
+}
+.bg-polar-bears {
+    background-image: url("../img/tiles/bgpolar.gif");
+}
+.bg-cotton-swirl {
+    background: url("../img/tiles/bgcottonpadtwisted.gif");
+}
+.bg-island {
+    background: url("../img/tiles/island.jpg");
+}
+.bg-rbow {
+    background: url("../img/tiles/bgrbow.jpg");
+}
+.bg-rbow-swirl {
+    background: url("../img/tiles/bgrbowswirl.gif");
+}
+.bg-dark-moon {
+    background: url("../img/tiles/darkmoon.gif");
+}
+.bg-dark-blue {
+    background: rgba(0, 0, 60, 0.7);
+}
+.bg-beach-alt {
+    background: url("../img/tiles/bgbeach4.gif");
+}
+.bg-hkitty {
+    background: url("../img/tiles/hkitty.jpg");
+}
+.bg-grimace {
+    background: url("../img/tiles/grimace.gif");
+}
+.bg-mcd {
+    background: url("../img/tiles/nomcd.gif"), black;
+}
+.bg-cds {
+    background: url("../img/tiles/bgcds.jpg");
+}
+.bg-binary-swirl {
+    background: url("../img/tiles/binaryswirl.jpg");
+}
+.bg-shark-tooth {
+    background: url("../img/tiles/sharktooth.jpg");
+}
+.bg-green-palm {
+    background: url("../img/tiles/bgreenpalm.gif");
+}
+.bg-paper-con {
+    background: url("../img/tiles/conbg.jpg");
+}
+.bg-paper-questionmark {
+    background: url("../img/tiles/interrogante.gif");
+}
+.bg-paper-leaf {
+    background: url("../img/tiles/leafpaper.gif");
+}
+.bg-paper-flowers {
+    background: url("../img/tiles/Backgd03.jpg");
+}
+.bg-cover {
+    background-size: cover;
+}
+.bg-square-tile {
+    background: url("../img/tiles/a1.gif");
+}
+.bg-atoms {
+    background: url("../img/tiles/atoms.jpg");
+}
+.bg-rainbow-clouds {
+    background: url("../img/tiles/b30.gif");
+}
+.bg-bible {
+    background: url("../img/tiles/bgbible.jpg");
+}
+.bg-smoke-blue {
+    background: url("../img/tiles/bgblueop.gif");
+}
+.bg-ethereal {
+    background: url("../img/tiles/bgbluewh.gif");
+}
+.bg-faded-clouds {
+    background: url("../img/tiles/bgclouds44.jpg");
+}
+.bg-egypt {
+    background: url("../img/tiles/bgegypt.gif");
+}
+.bg-fallen {
+    background: url("../img/tiles/bgfallen.jpg");
+    background-position: center;
+    background-size: 50%;
+}
+.bg-floral {
+    background: url("../img/tiles/bgfloral.jpg");
+}
+.bg-purple-sky {
+    background: url("../img/tiles/bgpurpclouds.gif");
+}
+.bg-blue-circuit {
+    background: url("../img/tiles/bluecircuit.jpg");
+}
+.bg-eyeball {
+    background: url("../img/tiles/blackball0011.gif");
+}
+.bg-text {
+    background-image: url("../img/tiles/text.jpg");
+}
+.bg-faded-paper {
+    background: url("../img/tiles/fadedtext.jpg");
+}
+.bg-red-sky {
+    background: url("../img/tiles/redsky.jpg");
+}
+.bg-checkered-swirl {
+    background: url("../img/tiles/checkbig.gif");
+}
+.bg-crystal {
+    background: url("../img/tiles/ESCENE42.gif");
+}
+.bg-fire {
+    background: url("../img/tiles/fire.jpg");
+}
+.bg-water {
+    background: url("../img/tiles/water.jpg");
+}
+.bg-metal-water {
+    background: url("../img/tiles/bgwaterdrops.gif");
+}
+.bg-panda {
+    background: url("../img/tiles/Panheart.gif");
+}
+.bg-jungle {
+    background-image: url("../img/tiles/Jungle.jpg");
+    background-size: 100% auto;
+    background-position: bottom;
+}
+.bg-jungle-alt {
+    background: url("../img/tiles/sfondo10.jpg");
+}
+.bg-tiger {
+    background: url("../img/tiles/bgtigerface.gif");
+}
+.bg-veg {
+    background-image: url("../img/tiles/set23b_backb.jpg");
+    /*background-image: url('../img/tiles/bgbluewh.gif');*/
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+.bg-okinawa {
+    background: url("../img/tiles/okinawa.gif");
+}
+.bg-eagle {
+    background: url("../img/tiles/eaglebkgd2.jpg");
+}
+.bg-flakes {
+    background: url("../img/tiles/flakes.gif");
+}
+.bg-rainbow {
+    background: url("../img/tiles/rainbow-background.gif");
+}
+.bg-clouds {
+    background: url("../img/tiles/clouds.gif");
+}
+.bg-clouds-alt {
+    background: url("../img/tiles/clouds4.jpg");
+}
+.bg-pastel-paper {
+    background: url("../img/tiles/pastelpap.jpg");
+}
+.bg-summer {
+    background: url("../img/tiles/summer_p.gif");
+}
+.bg-crossing-man {
+    background: url("../img/tiles/backs.gif");
+}
+.bg-purple-star {
+    background: url("../img/tiles/pentback.gif");
+}
+.bg-beer {
+    background: url("../img/tiles/budglass.jpg");
+    background-size: 40%;
+}
+
+/* HR backgrounds */
+
+.hr-rainbow {
+    background-image: url("../img/hrs/rainbowhr.gif");
+}
+.hr-rainbow-swirl {
+    background-image: url("../img/hrs/swirlbar.gif");
+}
+.hr-rainbow-paws {
+    background-image: url("../img/hrs/rainbow_paws.gif");
+}
+.hr-island {
+    background-image: url("../img/hrs/island.gif");
+}
+.hr-island-alt {
+    background-image: url("../img/hrs/islandpa.gif");
+}
+.hr-teddies {
+    background-image: url("../img/hrs/teddiesb.gif");
+}
+.hr-dna {
+    background-image: url("../img/hrs/DNAdivider.gif");
+}
+.hr-andes {
+    background-image: url("../img/hrs/andes.gif");
+    background-size: 100% 86px;
+    height: 86px;
+}
+.hr-jewish {
+    background-image: url("../img/hrs/jewish.gif");
+}
+.hr-stained-glass {
+    background-image: url("../img/hrs/stained-glass.gif");
+}
+
+.ul-rainbow-ball {
+    list-style-image: url("../img/bullets/aball.gif");
+}
+
+.ul-heart {
+    list-style-image: url("../img/bullets/aniheart.gif");
+}
+
+.ul-paw {
+    list-style-image: url("../img/bullets/anipaw.gif");
+}
+
+.ul-web {
+    list-style-image: url("../img/bullets/ballarrowring.gif");
+}
+
+.ul-pin-blue {
+    list-style-image: url("../img/bullets/bluepush.gif");
+}
+
+.ul-cd {
+    list-style-image: url("../img/bullets/cd.gif");
+}
+
+.ul-darwin {
+    list-style-image: url("../img/bullets/darwinfish.gif");
+}
+
+.ul-dolphin {
+    list-style-image: url("../img/bullets/dolph.gif");
+}
+
+.ul-earth {
+    list-style-image: url("../img/bullets/earth.gif");
+}
+
+.ul-siren {
+    list-style-image: url("../img/bullets/ems20.gif");
+}
+
+.ul-gears {
+    list-style-image: url("../img/bullets/gears.gif");
+}
+
+.ul-hotlist {
+    list-style-image: url("../img/bullets/hotlist.gif");
+}
+
+.ul-shark {
+    list-style-image: url("../img/bullets/imgsharkicon.gif");
+}
+
+.ul-jewish {
+    list-style-image: url("../img/bullets/jewish.gif");
+}
+
+.ul-atom {
+    list-style-image: url("../img/bullets/NUC_AN3.GIF");
+}
+
+.ul-smile {
+    list-style-image: url("../img/bullets/smilei.gif");
+}
+
+.ul-torch {
+    list-style-image: url("../img/bullets/torch.gif");
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+/* Animation Keyframes
+   ========================================================================== */
+
+/**
+ * Blink animation - creates a blinking effect
+ */
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/**
+ * Marquee animation - creates a horizontal scrolling effect
+ */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/**
+ * Fade animation - creates a fade in/out slideshow effect
+ */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    3% {
+        opacity: 1;
+    }
+    15% {
+        opacity: 1;
+    }
+    18% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/**
+ * Minecraft-style logo animation - creates a subtle scale and skew pulsing effect
+ */
+@keyframes minecraft-logo {
+    0% {
+        transform: scale(1) skew(0deg, 0deg);
+    }
+    25% {
+        transform: scale(1.08) skew(1.5deg, -1deg);
+    }
+    50% {
+        transform: scale(1.12) skew(2deg, -1.5deg);
+    }
+    75% {
+        transform: scale(1.08) skew(1.5deg, -1deg);
+    }
+    100% {
+        transform: scale(1) skew(0deg, 0deg);
+    }
+}
+
+/* Animation Classes
+   ========================================================================== */
+
+/**
+ * Blink effect - applies blinking animation
+ */
+.blink {
+    animation: blink 1s infinite;
+}
+
+/**
+ * Marquee container - sets up the scrolling text container
+ */
+.marquee-container {
+    margin: 0;
+    padding: 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/**
+ * Marquee text - applies the scrolling animation
+ */
+.marquee {
+    display: inline-block;
+    padding-left: 100%;
+    color: var(--neon-pink);
+    font-weight: bold;
+    animation: marquee 15s linear infinite;
+    text-shadow:
+        1px 1px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000;
+}
+
+/* Slideshow Animation Delays
+   ========================================================================== */
+
+/**
+ * Slideshow image animation delays
+ * Each image fades in/out with 5-second intervals
+ */
+.slideshow-face img {
+    animation: fade 35s infinite;
+}
+
+.slideshow-soapbox img {
+    animation: fade 35s infinite;
+}
+
+.slideshow-awards img {
+    animation: fade 35s infinite;
+}
+
+.slideshow-pets img {
+    animation: fade 35s infinite;
+}
+
+/**
+ * Minecraft-style logo animation class
+ * Applies the pulsing scale and skew effect
+ */
+.minecraft-logo {
+    animation: minecraft-logo 1.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* Generate animation delays for up to 20 slideshow images */
+.slideshow img:nth-child(1) {
+    animation-delay: 0s;
+}
+.slideshow img:nth-child(2) {
+    animation-delay: 5s;
+}
+.slideshow img:nth-child(3) {
+    animation-delay: 10s;
+}
+.slideshow img:nth-child(4) {
+    animation-delay: 15s;
+}
+.slideshow img:nth-child(5) {
+    animation-delay: 20s;
+}
+.slideshow img:nth-child(6) {
+    animation-delay: 25s;
+}
+.slideshow img:nth-child(7) {
+    animation-delay: 30s;
+}
+.slideshow img:nth-child(8) {
+    animation-delay: 35s;
+}
+.slideshow img:nth-child(9) {
+    animation-delay: 40s;
+}
+.slideshow img:nth-child(10) {
+    animation-delay: 45s;
+}
+.slideshow img:nth-child(11) {
+    animation-delay: 50s;
+}
+.slideshow img:nth-child(12) {
+    animation-delay: 55s;
+}
+.slideshow img:nth-child(13) {
+    animation-delay: 60s;
+}
+.slideshow img:nth-child(14) {
+    animation-delay: 65s;
+}
+.slideshow img:nth-child(15) {
+    animation-delay: 70s;
+}
+.slideshow img:nth-child(16) {
+    animation-delay: 75s;
+}
+.slideshow img:nth-child(17) {
+    animation-delay: 80s;
+}
+.slideshow img:nth-child(18) {
+    animation-delay: 85s;
+}
+.slideshow img:nth-child(19) {
+    animation-delay: 90s;
+}
+.slideshow img:nth-child(20) {
+    animation-delay: 95s;
+}
+
+.raised {
+    box-shadow:
+        5px 4px 8px rgba(0, 0, 0, 0.25),
+        0 6px 20px rgba(0, 0, 0, 0.25);
+    transform: translateY(0);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.raised:hover {
+    box-shadow:
+        5px 4px 8px var(--background-black),
+        0 6px 20px var(--background-black);
+    transform: translateY(-4px);
+}
+
+.tilted {
+    transform: rotate(1deg);
+}
+.tilted-reverse {
+    transform: rotate(-1deg);
+}
+.polaroid {
+    min-height: 375px;
+}
+.flipped {
+    transform: scale(-1, -1);
+}
+.scale-2x {
+    transform: scale(2);
+}

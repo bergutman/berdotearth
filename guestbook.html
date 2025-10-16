@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ber.earth - Home</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/utilities.css" />
+        <link href="https://github.com/bergutman" rel="me" />
+    </head>
+    <body class="bg-rainbow-clouds bg-repeat text-green guestbook-page">
+        <div
+            class="relative max-w-900 m-t-0 m-r-a m-b-0 m-l-a bg-waterfall bg-repeat border-double border-green"
+        >
+            <header
+                class="relative p-t-0 p-r-20 p-b-80 p-l-20 text-center bg-mountain bg-center"
+            >
+                <!-- Marquee -->
+                <div class="marquee-container">
+                    <div class="marquee">
+                        <span class="text-green"
+                            >★✰✮ Please leave a comment! ✮✰★ &nbsp;&nbsp; ★✰✮
+                            Tell me what you think of my site! ✮✰★ &nbsp;&nbsp;
+                            ★✰✮ Don't forget to sign the guestbook! ✮✰★</span
+                        >
+                    </div>
+                </div>
+                <img class="logo p-25" src="img/logos/guestbook.png" />
+                <div
+                    class="fixed inline-block pinned-top pinned-right bg-contain bg-center bg-no-repeat guestbook-baby"
+                ></div>
+            </header>
+            <nav
+                class="bg-leaves bg-repeat border-top-double border-bottom-double border-green"
+            >
+                <input type="checkbox" id="nav-toggle" class="hidden" />
+                <label for="nav-toggle" class="nav-toggle-label">Menu</label>
+                <div class="nav-links">
+                    <ul class="flex">
+                        <li>
+                            <a class="bg-rbow bg-repeat" href="index.html">
+                                <img src="img/bullets/dolph.gif" /> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a class="bg-rbow bg-repeat" href="bio.html">
+                                <img src="img/bullets/jewish.gif" /> Bio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="bg-rbow bg-repeat" href="pics.html">
+                                <img src="img/bullets/smilei.gif" /> Pics
+                            </a>
+                        </li>
+                        <li>
+                            <a class="bg-rbow bg-repeat" href="blog.html">
+                                <img src="img/bullets/hotlist.gif" /> Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a class="bg-rbow bg-repeat" href="guestbook.html">
+                                <img src="img/bullets/gbook.gif" /> Guestbook
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="flex p-15">
+                <div
+                    class="w-30 min-w-180 m-r-15 p-15 bg-ivy bg-repeat border-groove border-green"
+                >
+                    <div class="m-b-20 bg-grass border-groove border-green">
+                        <div class="widget-title bg-fern p-10">
+                            Guestbook Info
+                        </div>
+                        <p class="p-15">
+                            Welcome to my guestbook! This shit is kind of
+                            glitchy since I am too cheap to pay for hosting. If
+                            your message isn't showing up just give it a second
+                            and refresh the page.
+                        </p>
+                        <p class="m-t-10 p-15">
+                            <i class="fas fa-exclamation-triangle blink"></i> No
+                            spam please!
+                        </p>
+                    </div>
+                    <div
+                        class="m-b-20 bg-grass border-groove border-green text-center"
+                    >
+                        <div class="widget-title bg-fern p-10">
+                            Visitor Counter
+                        </div>
+                        <img src="img/clipart/globe.gif" />
+                        <div class="counter">
+                            <i class="fas fa-eye"></i> Guests:
+                            <span>000001</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div
+                        id="guestbook-entries"
+                        class="p-15 border-groove border-green bg-waterfall"
+                        style="text-align: center"
+                    >
+                        <img
+                            src="img/clipart/Advertise_Here.gif"
+                            id="loading-gif"
+                            alt="Loading..."
+                        />
+                    </div>
+                    <div class="m-t-20 p-15 border-solid border-green bg-ivy">
+                        <form
+                            id="guestbook-form"
+                            class="m-t-20 p-15 border-solid border-green bg-leaves"
+                        >
+                            <div class="m-b-15">
+                                <h3>
+                                    <i class="fas fa-pencil-alt"></i> Sign My
+                                    Guestbook
+                                </h3>
+                                <label
+                                    class="block m-b-5 color-green"
+                                    for="display-name"
+                                    >Display Name:</label
+                                >
+                                <input
+                                    class="w-100 p-10 border-solid border-green text-green bg-black"
+                                    type="text"
+                                    id="display-name"
+                                    name="entry.641373449"
+                                    required
+                                />
+                            </div>
+                            <div class="m-b-15">
+                                <label
+                                    class="block m-b-5 color-green"
+                                    for="what-say-you"
+                                    >What say you?:</label
+                                >
+                                <textarea
+                                    class="w-100 p-10 border-solid border-green text-green bg-black"
+                                    id="what-say-you"
+                                    name="entry.1667421222"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+                            <div style="text-align: center">
+                                <button type="submit" class="retro-button">
+                                    <i class="fas fa-paper-plane"></i> Submit
+                                    Message
+                                </button>
+                            </div>
+                        </form>
+                        <div
+                            id="form-feedback"
+                            style="text-align: center; margin-top: 10px"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="m-v-65 p-15 text-center">
+                <img
+                    src="img/clipart/bearring.gif"
+                    alt="Cool Homepages Webring"
+                />
+                <p>
+                    <a href="#" class="retro-button">Previous Site</a>
+                    <a href="#" class="retro-button">Random Site</a>
+                    <a href="#" class="retro-button">Next Site</a>
+                </p>
+            </div>
+            <footer
+                class="p-15 text-center bg-jungle bg-no-repeat border-top-double border-green"
+            >
+                <img src="img/clipart/animaldomain.gif" />
+                <p>Copyright is for weenies lol.</p>
+                <p>
+                    <a class="text-inherit" href="mailto:bergutman@pm.me"
+                        >Email</a
+                    >
+                    |
+                    <a
+                        class="text-inherit"
+                        href="https://github.com/bergutman"
+                        target="_blank"
+                        >GitHub</a
+                    >
+                    |
+                    <a
+                        class="text-inherit"
+                        href="https://www.youtube.com/@bluetoothtoilet"
+                        target="_blank"
+                        >YouTube</a
+                    >
+                </p>
+                <p style="font-size: 0.8rem; margin-top: 5px">
+                    Last Updated: October 16, 2025
+                </p>
+                <!-- Badges -->
+                <div class="p-15 text-center">
+                    <div class="badge m-5">
+                        <img src="img/badges/gnu_linux.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/anarchy.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/start_legalize2.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/gay.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/free_speech.gif" />
+                    </div>
+                    <div class="badge m-5">
+                        <img src="img/badges/valid-html40.png" />
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="js/guestbook.js"></script>
+    </body>
+</html>
