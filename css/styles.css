@@ -1600,7 +1600,6 @@ nav a:hover {
     padding: 8px 15px;
     margin: 5px;
     border: 2px outset var(--sun-yellow);
-    background: linear-gradient(to bottom, var(--neon-pink), #cc0099);
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -1609,7 +1608,6 @@ nav a:hover {
 
 .retro-button:hover {
     border: 2px inset var(--sun-yellow);
-    background: linear-gradient(to bottom, #ff99dd, var(--neon-pink));
 }
 
 .slideshow {
