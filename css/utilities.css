@@ -1,4 +1,7 @@
 /* --- Alignment & Display --- */
+.none {
+    display: none;
+}
 .block {
     display: block;
 }
