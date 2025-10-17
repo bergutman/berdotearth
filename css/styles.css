@@ -63,6 +63,11 @@ footer {
     text-align: center;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ==========================================================================
    3. Typography
    ========================================================================== */
@@ -1045,6 +1050,24 @@ nav a:hover {
         font-size: 2.2rem;
     }
 
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .p-20 { padding: 15px; }
+    .p-25 { padding: 20px; }
+    .p-50 { padding: 30px; }
+    .p-75 { padding: 40px; }
+    .p-80 { padding: 40px; }
+
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
     .main-content,
     .flex.p-15 {
         flex-direction: column;
@@ -1109,12 +1132,14 @@ nav a:hover {
     }
 
     nav li {
-        margin: 5px 0;
+        margin: 0;
     }
 
-    nav a {
-        width: 100%;
+    .nav-inner-inner ul {
+        padding: 0;
     }
+
+    
 
     /* Hide active nav link on its own page for mobile */
     .home-page nav a[href="index.html"],
@@ -1124,5 +1149,84 @@ nav a:hover {
     .blog-page nav a[href="blog.html"],
     .guestbook-page nav a[href="guestbook.html"] {
         display: none;
+    }
+
+    /* Page-specific mobile menu button styles */
+    .home-page .nav-toggle-label {
+        background: url(../img/tiles/orchid12.jpg);
+    }
+
+    .bio-page .nav-toggle-label {
+        background: url("../img/tiles/clouds.gif");
+    }
+
+    .pics-page .nav-toggle-label {
+        background: url("../img/tiles/bgbeanies.gif");
+    }
+
+    .blog-page .nav-toggle-label {
+        background-image: url(../img/tiles/text.jpg);
+    }
+
+    .guestbook-page .nav-toggle-label {
+        background: url("../img/tiles/bgrbow.jpg");
+    }
+
+    /* Add icons to mobile menu button */
+    .nav-toggle-label::before {
+        content: '';
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        vertical-align: text-bottom;
+        margin-right: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .home-page .nav-toggle-label::before {
+        background-image: url(../img/bullets/dolph.gif);
+    }
+
+    .bio-page .nav-toggle-label::before {
+        background-image: url(../img/bullets/jewish.gif);
+    }
+
+    .pics-page .nav-toggle-label::before {
+        background-image: url(../img/bullets/smilei.gif);
+    }
+
+    .blog-page .nav-toggle-label::before {
+        background-image: url(../img/bullets/hotlist.gif);
+    }
+
+    .guestbook-page .nav-toggle-label::before {
+        background-image: url(../img/bullets/gbook.gif);
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .p-15 { padding: 10px; }
+    .p-20 { padding: 10px; }
+    .p-25 { padding: 15px; }
+    .p-50 { padding: 20px; }
+    .p-75 { padding: 25px; }
+    .p-80 { padding: 25px; }
+
+    body {
+        padding: 15px;
     }
 }
