@@ -16,8 +16,17 @@ function isShabbat() {
   return false;
 }
 
+function shouldShowShabbatOverlay() {
+  const dismissedUntil = localStorage.getItem("shabbatOverlayDismissedUntil");
+  if (dismissedUntil) {
+    const now = Date.now();
+    return now > parseInt(dismissedUntil);
+  }
+  return true;
+}
+
 function showShabbatOverlay() {
-  if (isShabbat()) {
+  if (isShabbat() && shouldShowShabbatOverlay()) {
     const overlay = document.createElement("div");
     overlay.id = "shabbat-overlay";
     overlay.classList.add("bg-cloudy");
@@ -100,6 +109,13 @@ function showShabbatOverlay() {
       .getElementById("shabbat-toggle")
       .addEventListener("change", (event) => {
         if (event.target.checked) {
+          // Store dismissal for 24 hours
+          const dismissedUntil = Date.now() + 24 * 60 * 60 * 1000; // 24 hours from now
+          localStorage.setItem(
+            "shabbatOverlayDismissedUntil",
+            dismissedUntil.toString(),
+          );
+
           setTimeout(() => {
             overlay.style.display = "none";
             document.body.classList.remove("shabbat-overlay-active");
@@ -109,4 +125,29 @@ function showShabbatOverlay() {
   }
 }
 
-window.onload = showShabbatOverlay;
+// Utility function to check and reset local storage for testing
+function debugShabbatOverlay() {
+  console.log("=== Shabbat Overlay Debug Info ===");
+  console.log("Current page URL:", window.location.href);
+  console.log("isShabbat():", isShabbat());
+  console.log(
+    "localStorage 'shabbatOverlayDismissedUntil':",
+    localStorage.getItem("shabbatOverlayDismissedUntil"),
+  );
+  console.log("shouldShowShabbatOverlay():", shouldShowShabbatOverlay());
+  console.log("All localStorage keys:", Object.keys(localStorage));
+
+  // Add buttons to test functionality
+  const debugDiv = document.createElement("div");
+  debugDiv.style.cssText =
+    "position:fixed;top:10px;right:10px;background:white;padding:10px;border:1px solid black;z-index:10000;";
+  debugDiv.innerHTML = `
+    <h3>Shabbat Overlay Debug</h3>
+    <button onclick="localStorage.setItem('shabbatOverlayDismissedUntil', (Date.now() + 24 * 60 * 60 * 1000).toString()); console.log('Set dismissed for 24 hours')">Set Dismissed (24h)</button>
+    <button onclick="localStorage.removeItem('shabbatOverlayDismissedUntil'); console.log('Removed dismissed')">Clear Dismissed</button>
+    <button onclick="location.reload()">Reload Page</button>
+  `;
+  document.body.appendChild(debugDiv);
+}
+
+document.addEventListener("DOMContentLoaded", showShabbatOverlay);
