@@ -1623,11 +1623,32 @@ nav a:hover {
     padding: 5px;
     background-image: url("../img/hrs/fish.gif");
     transform: rotate(-5deg);
+    z-index: 10001;
+}
+
+@media (max-width: 768px) {
+    .fish {
+        width: 180px;
+        height: 81px;
+    }
 }
 
 .welcome-wrapper::after {
     content: url("../img/clipart/welcome.gif");
     position: absolute;
+}
+
+@media (max-width: 768px) {
+    .welcome-wrapper img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .welcome-wrapper::after {
+        max-width: 80%;
+        height: auto;
+        right: 15%;
+    }
 }
 
 .mezuzah {
@@ -1790,6 +1811,15 @@ nav a:hover {
 }
 
 .slideshow-face img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.slideshow-soapbox img,
+.slideshow-awards img,
+.slideshow-pets img {
     width: auto;
     height: 300px;
 }
@@ -2206,7 +2236,7 @@ input:checked + .slider-windows95:before {
     .logo {
         width: 100%;
         height: auto;
-        margin-top: 30px;
+        margin-top: 90px;
         max-width: 300px;
     }
 
@@ -2221,6 +2251,63 @@ input:checked + .slider-windows95:before {
     }
     .pinned-right {
         right: 15px;
+    }
+
+    /* Tier list mobile stacking */
+    .flex.m-b-10.border-solid.border-rainbow {
+        flex-direction: column;
+    }
+
+    .flex.m-b-10.border-solid.border-rainbow
+        > .flex.items-center.justify-center.w-100px,
+    .flex.m-b-10.border-solid.border-rainbow > .flex.justify-center.w-100px {
+        width: 100%;
+        min-height: 40px;
+    }
+
+    .flex.m-b-10.border-solid.border-rainbow
+        > .flex-1.flex-wrap.p-5.bg-black.items-center {
+        width: 100%;
+    }
+
+    /* Fairy image mobile sizing */
+    .home-footer-hack {
+        max-width: 80px;
+        height: auto;
+    }
+
+    /* Bio page mobile reordering */
+    .bio-page .flex.p-15 {
+        flex-direction: column;
+    }
+
+    .bio-page .w-30.min-w-180.m-r-15.p-15 {
+        order: 2;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .bio-page .flex-1.p-15 {
+        order: 1;
+        width: 100%;
+    }
+
+    /* Home page mobile reordering */
+    .home-page .flex.p-15 {
+        flex-direction: column;
+    }
+
+    .home-page .w-30.min-w-180.m-r-15.p-15 {
+        order: 2;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .home-page .flex-1.p-15 {
+        order: 1;
+        width: 100%;
     }
 
     /* Mobile Navigation Toggle */
