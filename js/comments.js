@@ -4,9 +4,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const postId = commentsContainer.dataset.postId;
   const commentsList = document.getElementById("comments-list");
+  const commentsGrid = document.createElement("div");
+  commentsGrid.className = "grid grid-2 gap-30 m-t-15 m-b-15";
+  const stickyColors = [
+    "bg-sticky-yellow",
+    "bg-sticky-orange",
+    "bg-sticky-pink",
+    "bg-sticky-blue",
+    "bg-sticky-green",
+  ];
+  const commentFormContainer = document.querySelector(".comment-form");
   const commentsForm = document.getElementById("comment-form");
   const formFeedback = document.getElementById("comment-form-feedback");
   const postIdInput = document.getElementById("post-id-input");
+
+  // Move form container above comments and style as single column
+  if (commentFormContainer) {
+    const formWrapper = document.createElement("div");
+    formWrapper.className = "flex justify-center m-b-30";
+    commentFormContainer.className += " w-50";
+    formWrapper.appendChild(commentFormContainer);
+    commentsList.parentNode.insertBefore(formWrapper, commentsList);
+  }
 
   // Set the post ID in the hidden form field
   if (postIdInput) {
@@ -17,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const url =
       "https://corsproxy.io/?https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_tHMdbJbaRy6bD4zUJ4ktu0WCKvjOiJ62_U2XwFQp6I2uwPLpYlLyG08UVAllCd1ePSQcuctD-r1s/pub?gid=495620982&single=true&output=csv";
     commentsList.innerHTML =
-      '<img src="../img/clipart/Advertise_Here.gif" id="loading-gif" alt="Loading..." />';
+      '<div class="text-center m-b-30"><img src="../img/clipart/Advertise_Here.gif" id="loading-gif" alt="Loading..." /></div>';
+    commentsList.appendChild(commentsGrid);
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
@@ -37,19 +57,65 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         commentsList.innerHTML = "";
+        commentsList.appendChild(commentsGrid);
+        commentsGrid.innerHTML = "";
         function parseCSV(text) {
-          let lines = text.split("\n");
           let result = [];
-          for (let i = 1; i < lines.length; i++) {
-            let currentline = lines[i].split(",");
-            result.push(currentline);
+          let currentLine = [];
+          let currentField = "";
+          let inQuotes = false;
+          let i = 0;
+
+          // Skip header line
+          let headerEnd = text.indexOf("\n");
+          if (headerEnd === -1) return result;
+          i = headerEnd + 1;
+
+          while (i < text.length) {
+            let char = text[i];
+
+            if (char === '"') {
+              inQuotes = !inQuotes;
+              i++;
+            } else if (char === "," && !inQuotes) {
+              currentLine.push(currentField.trim());
+              currentField = "";
+              i++;
+            } else if (char === "\n" && !inQuotes) {
+              currentLine.push(currentField.trim());
+              if (currentLine.length > 0) {
+                result.push(currentLine);
+              }
+              currentLine = [];
+              currentField = "";
+              i++;
+            } else if (char === "\n" && inQuotes) {
+              // Preserve line breaks within quoted fields
+              currentField += "\n";
+              i++;
+            } else {
+              currentField += char;
+              i++;
+            }
           }
+
+          // Add the last line if there's any content
+          if (currentField.trim() !== "" || currentLine.length > 0) {
+            currentLine.push(currentField.trim());
+            if (currentLine.length > 0) {
+              result.push(currentLine);
+            }
+          }
+
           return result;
         }
+
+        // Remove the old parseCSVLine function as it's no longer needed
         const rows = parseCSV(data);
 
         rows.reverse();
 
+        let commentIndex = 0;
         rows.forEach((row) => {
           if (row.length < 4) return;
 
@@ -60,25 +126,57 @@ document.addEventListener("DOMContentLoaded", () => {
             const message = row[3];
 
             const entry = document.createElement("div");
-            entry.className = "comment-entry bg-shadow";
+            const colorClass = stickyColors[commentIndex % stickyColors.length];
+            const tiltClass =
+              commentIndex % 2 === 0 ? "tilted-reverse" : "tilted";
+            entry.className = `comment-entry block m-b-20 p-25 p-t-30 no-decoration text-inherit ${colorClass} border-solid raised ${tiltClass}`;
+            commentIndex++;
 
-            const nameEl = document.createElement("div");
+            const pinEl = document.createElement("img");
+            pinEl.className = "absolute left-0 right-0 m-h-a m-t--30";
+            const pinColors = {
+              "bg-sticky-yellow": "../img/bullets/purplepush.gif",
+              "bg-sticky-orange": "../img/bullets/bluepush.gif",
+              "bg-sticky-pink": "../img/bullets/greenpush.gif",
+              "bg-sticky-blue": "../img/bullets/orangepush.gif",
+              "bg-sticky-green": "../img/bullets/redpush.gif",
+            };
+            pinEl.src = pinColors[colorClass];
+
+            const metaEl = document.createElement("div");
+            metaEl.className = "flex justify-space-between m-b-10";
+
+            const nameIcon = document.createElement("i");
+            nameIcon.className = "fas fa-user";
+
+            const nameEl = document.createElement("span");
             nameEl.className = "comment-name";
-            nameEl.textContent = name;
+            nameEl.appendChild(nameIcon);
+            nameEl.appendChild(document.createTextNode(" " + name));
 
-            const dateEl = document.createElement("div");
+            const dateEl = document.createElement("span");
             dateEl.className = "comment-date";
+            const dateIcon = document.createElement("i");
+            dateIcon.className = "fas fa-calendar";
             const date = new Date(timestamp);
-            dateEl.textContent = `Posted: ${date.toLocaleDateString()}`;
+            dateEl.appendChild(dateIcon);
+            dateEl.appendChild(
+              document.createTextNode(
+                ` ${date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`,
+              ),
+            );
 
             const messageEl = document.createElement("p");
             messageEl.textContent = message;
+            messageEl.className = "comment-message";
 
-            entry.appendChild(nameEl);
-            entry.appendChild(dateEl);
+            entry.appendChild(pinEl);
+            entry.appendChild(metaEl);
+            metaEl.appendChild(nameEl);
+            metaEl.appendChild(dateEl);
             entry.appendChild(messageEl);
 
-            commentsList.appendChild(entry);
+            commentsGrid.appendChild(entry);
           }
         });
       })
@@ -104,24 +202,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Optimistic UI update
       const entry = document.createElement("div");
-      entry.className = "comment-entry bg-shadow";
+      const existingComments = commentsGrid.querySelectorAll(".comment-entry");
+      const colorClass =
+        stickyColors[existingComments.length % stickyColors.length];
+      const tiltClass =
+        existingComments.length % 2 === 0 ? "tilted-reverse" : "tilted";
+      entry.className = `comment-entry block m-b-20 p-25 p-t-30 no-decoration text-inherit ${colorClass} border-solid raised ${tiltClass}`;
 
-      const nameEl = document.createElement("div");
+      const pinEl = document.createElement("img");
+      pinEl.className = "absolute left-0 right-0 m-h-a m-t--30";
+      const pinColors = {
+        "bg-sticky-yellow": "../img/bullets/purplepush.gif",
+        "bg-sticky-orange": "../img/bullets/bluepush.gif",
+        "bg-sticky-pink": "../img/bullets/greenpush.gif",
+        "bg-sticky-blue": "../img/bullets/orangepush.gif",
+        "bg-sticky-green": "../img/bullets/redpush.gif",
+      };
+      pinEl.src = pinColors[colorClass];
+
+      const metaEl = document.createElement("div");
+      metaEl.className = "flex justify-space-between m-b-10";
+
+      const nameIcon = document.createElement("i");
+      nameIcon.className = "fas fa-comment";
+
+      const nameEl = document.createElement("span");
       nameEl.className = "comment-name";
-      nameEl.textContent = name;
+      nameEl.appendChild(nameIcon);
+      nameEl.appendChild(document.createTextNode(" " + name));
 
-      const dateEl = document.createElement("div");
+      const dateEl = document.createElement("span");
       dateEl.className = "comment-date";
-      dateEl.textContent = `Posted: ${new Date().toLocaleDateString()}`;
+      const dateIcon = document.createElement("i");
+      dateIcon.className = "fas fa-calendar";
+      const date = new Date();
+      dateEl.appendChild(dateIcon);
+      dateEl.appendChild(
+        document.createTextNode(
+          ` Posted: ${date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`,
+        ),
+      );
 
       const messageEl = document.createElement("p");
       messageEl.textContent = message;
+      messageEl.className = "comment-message";
 
-      entry.appendChild(nameEl);
-      entry.appendChild(dateEl);
+      entry.appendChild(pinEl);
+      entry.appendChild(metaEl);
+      metaEl.appendChild(nameEl);
+      metaEl.appendChild(dateEl);
       entry.appendChild(messageEl);
 
-      commentsList.prepend(entry);
+      commentsGrid.prepend(entry);
 
       fetch(url, {
         method: "POST",
