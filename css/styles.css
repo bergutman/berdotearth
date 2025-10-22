@@ -1720,8 +1720,7 @@ nav a:hover {
 
 @media (max-width: 768px) {
     .fish {
-        width: 180px;
-        height: 81px;
+        display: none;
     }
 }
 
@@ -2400,6 +2399,14 @@ input:checked + .slider-windows95:before {
     .home-page .flex-1.p-15 {
         order: 1;
         width: 100%;
+    }
+
+    /* Hide floating elements on mobile */
+    .fish,
+    .camera,
+    .pen,
+    .guestbook-baby {
+        display: none;
     }
 
     /* Mobile Navigation Toggle */
