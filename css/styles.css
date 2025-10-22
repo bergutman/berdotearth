@@ -2516,8 +2516,22 @@ input:checked + .slider-windows95:before {
     .p-15 {
         padding: 10px;
     }
+
+    /* Exception for ruled paper background to maintain 15px padding */
+    .bg-ruled-paper.p-15 {
+        padding: 15px;
+    }
+    .bg-ruled-paper article {
+        margin-top: 3px;
+    }
     .p-20 {
         padding: 10px;
+    }
+
+    /* Center ruled paper background on mobile */
+    .bg-ruled-paper,
+    .bg-ruled-paper-header {
+        background-position-x: center;
     }
     .p-25 {
         padding: 15px;
