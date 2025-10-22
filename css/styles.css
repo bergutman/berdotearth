@@ -2540,6 +2540,29 @@ input:checked + .slider-windows95:before {
         background-position-x: center;
     }
 
+    /* Mobile responsive form field widths */
+    #display-name {
+        width: 100%;
+    }
+
+    #comment {
+        width: 300px;
+    }
+
+    @media (max-width: 768px) {
+        #display-name {
+            width: 100%;
+        }
+
+        #comment {
+            width: 100%;
+        }
+
+        .comment-form {
+            width: 100%;
+        }
+    }
+
     .p-25 {
         padding: 15px;
     }
