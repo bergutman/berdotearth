@@ -1184,6 +1184,12 @@ article img:hover {
     transform: none;
 }
 
+.image-expand-label.scale-hover:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid red !important;
+}
+
 .image-expand-content img:hover {
     transform: none;
 }
@@ -1195,6 +1201,7 @@ article img:hover {
 
 .image-expand-label {
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
 .image-expand-overlay {
