@@ -2361,9 +2361,9 @@ input:checked + .slider-windows95:before {
         width: 100%;
     }
 
-    /* Fairy image mobile sizing */
-    .home-footer-hack {
-        max-width: 80px;
+    /* Footer images mobile sizing */
+    footer img {
+        max-width: 200px;
         height: auto;
     }
 
@@ -2502,15 +2502,15 @@ input:checked + .slider-windows95:before {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
         font-size: 1.5rem;
     }
 
+    h2 {
+        font-size: 1.25rem;
+    }
+
     h3 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .p-15 {
