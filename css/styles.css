@@ -347,6 +347,12 @@ h1 {
 .m-r-50 {
     margin-right: 50px;
 }
+
+@media (max-width: 768px) {
+    .political-compass-title.m-r-50 {
+        margin-right: 0;
+    }
+}
 .m-r-a {
     margin-right: auto;
 }
@@ -2533,6 +2539,7 @@ input:checked + .slider-windows95:before {
     .bg-ruled-paper-header {
         background-position-x: center;
     }
+
     .p-25 {
         padding: 15px;
     }

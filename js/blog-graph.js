@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Mobile detection for responsive font sizing
+  const isMobile = window.innerWidth <= 768;
+  const mobileFontScale = isMobile ? 0.65 : 1;
   const ctx = document.getElementById("politicalCompass").getContext("2d");
 
   // Create consistent wobbly effect by adding seeded noise to points
@@ -120,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       this.quadrant = quadrant;
       this.dx = (Math.random() * 2 + 1) * (Math.random() > 0.5 ? 1 : -1);
       this.dy = (Math.random() * 2 + 1) * (Math.random() > 0.5 ? 1 : -1);
-      this.size = 16;
+      this.size = 16 * mobileFontScale;
     }
 
     update(chartArea) {
@@ -381,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scaleY = politicalCompass.scales.y;
 
     ctx.save();
-    ctx.font = 'bold 18px "Comic Relief", system-ui';
+    ctx.font = `bold ${18 * mobileFontScale}px "Comic Relief", system-ui`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
@@ -392,7 +395,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Check if label has line breaks
       const lines = ideology.label.split("\n");
-      const lineHeight = 24;
+      const lineHeight = 24 * mobileFontScale;
       const startY = pixelY - ((lines.length - 1) * lineHeight) / 2;
 
       // Draw each line with black outline and colored text
@@ -421,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scaleY = politicalCompass.scales.y;
 
     ctx.save();
-    ctx.font = 'bold 20px "Comic Relief", system-ui';
+    ctx.font = `bold ${20 * mobileFontScale}px "Comic Relief", system-ui`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
 
