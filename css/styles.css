@@ -1670,7 +1670,7 @@ nav a:hover {
     min-height: 375px;
 }
 .flipped {
-    transform: scale(-1, -1);
+    transform: scale(-1, 1);
 }
 .scale-2x {
     transform: scale(2);
@@ -1733,6 +1733,12 @@ nav a:hover {
 
 @media (max-width: 768px) {
     .fish {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hide-mobile {
         display: none;
     }
 }
@@ -2341,7 +2347,7 @@ input:checked + .slider-windows95:before {
         width: 100%;
         height: auto;
         margin-top: 90px;
-        max-width: 300px;
+        max-width: 400px;
     }
 
     .logo-alt {
