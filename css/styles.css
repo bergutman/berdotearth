@@ -2537,6 +2537,10 @@ input:checked + .slider-windows95:before {
     }
 
     /* Exception for ruled paper background to maintain 15px padding */
+    .bg-ruled-paper {
+        background-color: #ffffcc !important;
+        background: none; /* TEMPORARY CHANGE BECAUSE I CAN'T GET VERTICAL ALIGNMENT TO WORK */
+    }
     .bg-ruled-paper.p-15 {
         padding: 15px;
     }
