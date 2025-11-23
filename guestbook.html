@@ -80,16 +80,26 @@
                         <div class="widget-title bg-fern p-10">
                             Guestbook Info
                         </div>
-                        <p class="p-15">
-                            Welcome to my guestbook! This shit is kind of
-                            glitchy since I am too cheap to pay for hosting. If
-                            your message isn't showing up just give it a second
-                            and refresh the page.
-                        </p>
-                        <p class="m-t-10 p-15">
-                            <i class="fas fa-exclamation-triangle blink"></i> No
-                            spam please!
-                        </p>
+                        <div class="widget-content">
+                            <p class="p-15">
+                                Welcome to my guestbook! I don't remove anything
+                                unless it's hate speech or spam.
+                            </p>
+                            <p class="m-t-10 p-15" style="font-size: 0.9rem">
+                                <strong>🔒 Privacy Commitment:</strong><br />
+                                <strong>Zero IP Tracking</strong>
+                                - No IP addresses collected or stored<br />
+                                <strong>Minimal Data</strong>
+                                - Only name, message, and timestamp
+                                requested/saved<br />
+                            </p>
+                            <p class="m-t-10 p-15">
+                                <i
+                                    class="fas fa-exclamation-triangle blink"
+                                ></i>
+                                No spam please!
+                            </p>
+                        </div>
                         <img src="img/clipart/friend_on.gif" />
                     </div>
                     <div
@@ -102,6 +112,23 @@
                         <div class="counter">
                             <i class="fas fa-eye"></i> Guests:
                             <span>000001</span>
+                        </div>
+                        <div
+                            class="m-t-10 text-center"
+                            style="font-size: 11px; opacity: 0.8"
+                        >
+                            <p style="margin: 0">
+                                PRIVACY NOTICE: No IPs or personal data is
+                                logged! Your browser session is hashed for
+                                anonymity.
+                            </p>
+                            <p style="margin: 5px 0 0 0">
+                                <a
+                                    href="https://github.com/bergutman/berdotearth"
+                                    target="_blank"
+                                    >CLICK HERE TO AUDIT THE CODE YOURSELF</a
+                                >
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -136,7 +163,8 @@
                                     class="w-100 p-10 border-solid border-green text-green bg-black"
                                     type="text"
                                     id="display-name"
-                                    name="entry.641373449"
+                                    name="display_name"
+                                    maxlength="100"
                                     required
                                 />
                             </div>
@@ -149,10 +177,20 @@
                                 <textarea
                                     class="w-100 p-10 border-solid border-green text-green bg-black"
                                     id="what-say-you"
-                                    name="entry.1667421222"
+                                    name="message"
                                     rows="5"
+                                    maxlength="10000"
                                     required
                                 ></textarea>
+                                <small
+                                    style="
+                                        color: var(--lime-green);
+                                        font-size: 0.8rem;
+                                    "
+                                >
+                                    No URLs/emails/phone numbers allowed • Max
+                                    10,000 characters
+                                </small>
                             </div>
                             <div style="text-align: center">
                                 <button type="submit" class="retro-button">
@@ -235,6 +273,16 @@
                 </div>
             </footer>
         </div>
-        <script src="js/guestbook.js"></script>
+        <!-- Supabase SDK -->
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+        <!-- Guestbook Scripts -->
+        <script src="js/supabase-client.js?v=20241122"></script>
+        <script src="js/guestbook-api.js?v=20241122-nolimit"></script>
+        <script src="js/guestbook.js?v=20241122"></script>
+
+        <!-- Visit Tracking Scripts -->
+        <script src="js/visit-tracking-api.js?v=20241122"></script>
+        <script src="js/visit-tracking.js?v=20241122"></script>
     </body>
 </html>

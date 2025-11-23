@@ -7,7 +7,7 @@
   This stylesheet has been reorganized for better readability and maintenance.
   It is divided into the following sections:
   1.  Variable Definitions
-  2.  Global Styles
+  2.  Global Styles & Resets
   3.  Typography
   4.  Layout Utilities
   5.  Spacing Utilities
@@ -15,7 +15,8 @@
   7.  Background Utilities
   8.  Component Styles
   9.  Animation Keyframes & Classes
-  10. Media Queries
+  10. Overlay Components
+  11. Media Queries
 ==========================================================================
 */
 
@@ -38,7 +39,7 @@
 }
 
 /* ==========================================================================
-   2. Global Styles
+   2. Global Styles & Resets
    ========================================================================== */
 
 * {
@@ -80,6 +81,14 @@ h1 {
     text-transform: uppercase;
 }
 
+h2 {
+    font-size: inherit;
+}
+
+h3 {
+    font-size: inherit;
+}
+
 .blog-post-title-large {
     font-size: 2.5rem;
     color: inherit;
@@ -87,6 +96,7 @@ h1 {
     letter-spacing: normal;
 }
 
+/* Text Alignment */
 .text-left {
     text-align: left;
 }
@@ -96,9 +106,13 @@ h1 {
 .text-justify {
     text-align: justify;
 }
+
+/* Text Decoration */
 .no-decoration {
     text-decoration: none;
 }
+
+/* Text Weight & Style */
 .text-bold {
     font-weight: bold;
 }
@@ -120,6 +134,9 @@ h1 {
 }
 .text-white {
     color: white;
+}
+.text-red {
+    color: var(--blood-red);
 }
 .text-inherit {
     color: inherit;
@@ -152,9 +169,7 @@ h1 {
    ========================================================================== */
 
 /* Display */
-.none {
-    display: none;
-}
+.none,
 .hidden {
     display: none;
 }
@@ -295,6 +310,7 @@ h1 {
     margin-bottom: 65px;
 }
 
+/* Margin Top */
 .m-t-0 {
     margin-top: 0;
 }
@@ -329,6 +345,7 @@ h1 {
     margin-top: auto;
 }
 
+/* Margin Right */
 .m-r-0 {
     margin-right: 0;
 }
@@ -347,16 +364,11 @@ h1 {
 .m-r-50 {
     margin-right: 50px;
 }
-
-@media (max-width: 768px) {
-    .political-compass-title.m-r-50 {
-        margin-right: 0;
-    }
-}
 .m-r-a {
     margin-right: auto;
 }
 
+/* Margin Bottom */
 .m-b-0 {
     margin-bottom: 0;
 }
@@ -382,6 +394,7 @@ h1 {
     margin-bottom: auto;
 }
 
+/* Margin Left */
 .m-l-0 {
     margin-left: 0;
 }
@@ -421,6 +434,7 @@ h1 {
     padding: 75px;
 }
 
+/* Padding Top */
 .p-t-0 {
     padding-top: 0;
 }
@@ -437,6 +451,7 @@ h1 {
     padding-top: 80px;
 }
 
+/* Padding Right */
 .p-r-0 {
     padding-right: 0;
 }
@@ -450,6 +465,7 @@ h1 {
     padding-right: 80px;
 }
 
+/* Padding Bottom */
 .p-b-0 {
     padding-bottom: 0;
 }
@@ -463,6 +479,7 @@ h1 {
     padding-bottom: 80px;
 }
 
+/* Padding Left */
 .p-l-0 {
     padding-left: 0;
 }
@@ -480,7 +497,7 @@ h1 {
    6. Border Utilities
    ========================================================================== */
 
-/* Border Style */
+/* Border Styles */
 .border-solid {
     border: 3px solid var(--background-black);
 }
@@ -506,6 +523,7 @@ h1 {
     border: 3px outset var(--background-black);
 }
 
+/* Individual Border Styles */
 .border-top-double {
     border-top: 6px double var(--background-black);
 }
@@ -525,7 +543,7 @@ h1 {
     border-right: 3px ridge var(--background-black);
 }
 
-/* Border Color */
+/* Border Colors */
 .border-black {
     border-color: black;
 }
@@ -648,7 +666,7 @@ h1 {
     background-repeat: repeat-x;
 }
 
-/* Background Colors */
+/* Solid Background Colors */
 .bg-white {
     background-color: #fff;
 }
@@ -908,7 +926,7 @@ h1 {
     background-size: 40%;
 }
 .bg-bears {
-    background-image: url("../img/tiles/bgteddy.gif");
+    background-image: url("../img/tiles/bgteddy.jpg");
 }
 .bg-polar-bears {
     background-image: url("../img/tiles/bgpolar.gif");
@@ -1081,14 +1099,7 @@ h1 {
    8. Component Styles
    ========================================================================== */
 
-/* --- Comment Messages --- */
-.comment-message {
-    max-height: 300px;
-    overflow-y: auto;
-    line-height: 1.5;
-}
-
-/* --- Article --- */
+/* --- Article Content --- */
 article p,
 article h1,
 article h3,
@@ -1107,7 +1118,11 @@ article img {
     transition: transform 0.3s ease;
 }
 
-/* Blog-specific image styling */
+article img:hover {
+    transform: scale(1.02);
+}
+
+/* --- Blog Images --- */
 .blog-image-container {
     break-inside: avoid;
     display: flex;
@@ -1130,10 +1145,8 @@ article img {
     max-width: 600px;
 }
 
-.image-expand-label.blog-image-label {
-    /* Keep minimal styling needed for expand functionality */
-    cursor: pointer;
-    display: block;
+.blog-image-label:hover {
+    transform: scale(1.02);
 }
 
 .blog-image-label img {
@@ -1147,16 +1160,15 @@ article img {
     border: none !important;
 }
 
-.image-expand-label.blog-image-label img {
-    /* Ensure expand functionality works */
-    cursor: pointer;
+.image-expand-label.blog-image-label img:hover {
+    transform: none;
 }
 
 .blog-image-caption {
     text-align: center;
     font-style: italic;
     margin: 0;
-    padding: 8px 8px 8px 8px;
+    padding: 8px;
     color: black;
     font-size: 14px;
     break-inside: avoid;
@@ -1168,30 +1180,10 @@ article img {
     justify-content: center;
 }
 
-.image-expand-label.blog-image-label:hover {
-    transform: scale(1.02);
-}
-
-.blog-image-label:hover {
-    transform: scale(1.02);
-}
-
-article img:hover {
-    transform: scale(1.02);
-}
-
-.image-expand-label.blog-image-label img:hover {
-    transform: none;
-}
-
 .image-expand-label.scale-hover:hover {
     transform: scale(1.02);
     transition: transform 0.2s ease-in-out;
     border: 2px solid red !important;
-}
-
-.image-expand-content img:hover {
-    transform: none;
 }
 
 /* --- Image Expand (Modal) --- */
@@ -1279,6 +1271,10 @@ article img:hover {
     display: block;
     object-fit: contain;
     border: 2px inset #c0c0c0;
+}
+
+.image-expand-content img:hover {
+    transform: none;
 }
 
 .image-caption {
@@ -1471,7 +1467,7 @@ nav a:hover {
     background-image: url("../img/bullets/new.gif");
 }
 
-/* Bullet Images */
+/* Bullet Image Lists */
 .ul-rainbow-ball {
     list-style-image: url("../img/bullets/aball.gif");
 }
@@ -1524,7 +1520,7 @@ nav a:hover {
     list-style-image: url("../img/bullets/torch.gif");
 }
 
-/* --- Horizontal Rules (HR) --- */
+/* --- Horizontal Rules --- */
 .hr {
     height: 20px;
     margin: 15px 0;
@@ -1639,6 +1635,12 @@ nav a:hover {
 }
 
 /* --- Miscellaneous Components --- */
+.comment-message {
+    max-height: 300px;
+    overflow-y: auto;
+    line-height: 1.5;
+}
+
 .highlight {
     background-color: var(--sun-yellow);
 }
@@ -1660,6 +1662,7 @@ nav a:hover {
     transform: translateY(-4px);
 }
 
+/* Transform Classes */
 .tilted {
     transform: rotate(1deg);
 }
@@ -1676,6 +1679,7 @@ nav a:hover {
     transform: scale(2);
 }
 
+/* Badge and Counter Components */
 .badge {
     display: inline-block;
     width: 88px;
@@ -1685,12 +1689,6 @@ nav a:hover {
     color: var(--sun-yellow);
     font-size: 0.7rem;
     line-height: 31px;
-}
-
-.camera {
-    width: 80px;
-    height: 60px;
-    background-image: url("../img/clipart/camera.gif");
 }
 
 .counter {
@@ -1711,6 +1709,7 @@ nav a:hover {
     color: var(--neon-pink);
 }
 
+/* Logo Components */
 .logo {
     height: 140px;
     width: auto;
@@ -1722,6 +1721,7 @@ nav a:hover {
     width: auto;
 }
 
+/* Floating Components */
 .fish {
     width: 250px;
     height: 113px;
@@ -1731,34 +1731,9 @@ nav a:hover {
     z-index: 10001;
 }
 
-@media (max-width: 768px) {
-    .fish {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .hide-mobile {
-        display: none;
-    }
-}
-
 .welcome-wrapper::after {
     content: url("../img/clipart/welcome.gif");
     position: absolute;
-}
-
-@media (max-width: 768px) {
-    .welcome-wrapper img {
-        max-width: 80%;
-        height: auto;
-    }
-
-    .welcome-wrapper::after {
-        max-width: 80%;
-        height: auto;
-        right: 15%;
-    }
 }
 
 .mezuzah {
@@ -1773,10 +1748,22 @@ nav a:hover {
     background-image: url("../img/clipart/guestbookbeaniebaby.gif");
 }
 
+/* Guestbook page specific widget title styling */
+.guestbook-page .widget-title {
+    color: var(--lime-green);
+    border-bottom: 2px solid var(--lime-green);
+}
+
 .pen {
     width: 100px;
     height: 100px;
     background-image: url("../img/clipart/yo-draw.gif");
+}
+
+.camera {
+    width: 80px;
+    height: 60px;
+    background-image: url("../img/clipart/camera.gif");
 }
 
 /* ==========================================================================
@@ -1849,7 +1836,7 @@ nav a:hover {
     transform-origin: center;
 }
 
-/* Marquee */
+/* --- Marquee --- */
 .marquee-container {
     margin: 0;
     padding: 5px 0;
@@ -1893,7 +1880,7 @@ nav a:hover {
     color: violet;
 }
 
-/* Slideshow */
+/* --- Slideshow --- */
 .slideshow {
     overflow: hidden;
 }
@@ -1997,24 +1984,11 @@ nav a:hover {
 }
 
 /* ==========================================================================
-   10. Media Queries
+   10. Overlay Components
    ========================================================================== */
 
-#shabbat-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    flex-direction: column;
-    padding: 20px;
-}
-
+/* --- Base Overlay Styles --- */
+#shabbat-overlay,
 #mobile-overlay {
     position: fixed;
     top: 0;
@@ -2030,108 +2004,56 @@ nav a:hover {
     padding: 20px;
 }
 
-body.shabbat-overlay-active {
-    overflow: hidden;
-    padding: 0;
-}
-
+body.shabbat-overlay-active,
 body.mobile-overlay-active {
     overflow: hidden;
     padding: 0;
 }
 
-.bouncing-shalom {
-    position: fixed;
-    z-index: 9998;
-}
-
+/* --- Bouncing Elements --- */
+.bouncing-shalom,
 .bouncing-grass {
     position: fixed;
     z-index: 9998;
 }
 
-.bouncing-shalom img {
-    width: 100%;
-    height: auto;
-}
-
+.bouncing-shalom img,
 .bouncing-grass img {
     width: 100%;
     height: auto;
 }
 
-.shabbat-image {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 200px;
-    height: auto;
-}
-
+/* --- Overlay Content --- */
+.shabbat-image,
 .mobile-image {
-    display: block;
-    margin: 0 auto 20px auto;
+    display: block !important;
+    margin: 0 auto 20px auto !important;
     width: 200px;
     height: auto;
+    border: none;
 }
 
-#shabbat-overlay .image-expand-content {
-    max-width: 600px;
-    z-index: 10000;
-}
-
+#shabbat-overlay .image-expand-content,
 #mobile-overlay .image-expand-content {
     max-width: 600px;
     z-index: 10000;
 }
 
-#shabbat-overlay .shabbat-content {
-    padding: 20px;
-    text-align: center;
-    overflow-y: scroll;
-}
-
+#shabbat-overlay .shabbat-content,
 #mobile-overlay .mobile-content {
     padding: 20px;
     text-align: center;
     overflow-y: scroll;
 }
 
-#shabbat-overlay .shabbat-image {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 200px;
-    height: auto;
-    border: none;
-}
-
-#mobile-overlay .mobile-image {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 200px;
-    height: auto;
-    border: none;
-}
-
-#shabbat-overlay h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: black;
-}
-
+#shabbat-overlay h1,
 #mobile-overlay h1 {
     font-size: 4rem;
     margin-bottom: 20px;
     color: black;
 }
 
-#shabbat-overlay p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 600px;
-    line-height: 1.6;
-    color: black;
-}
-
+#shabbat-overlay p,
 #mobile-overlay p {
     font-size: 1.2rem;
     margin-bottom: 30px;
@@ -2140,30 +2062,13 @@ body.mobile-overlay-active {
     color: black;
 }
 
-#dismiss-shabbat-overlay {
-    background-color: white;
-    color: black;
-    border: 2px solid white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
-}
-
-#dismiss-shabbat-overlay:hover {
-    background-color: black;
-    color: white;
-}
-
-/* The switch - the box around the slider */
+/* --- Windows 95 Style Switch --- */
 .switch-windows95 {
     position: relative;
     display: inline-block;
-    width: 170px; /* Increased width to accommodate text */
-    height: 35px; /* Adjusted height */
-    background: #c0c0c0; /* Windows 95 gray */
+    width: 170px;
+    height: 35px;
+    background: #c0c0c0;
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
     border-right: 2px solid #808080;
@@ -2172,64 +2077,57 @@ body.mobile-overlay-active {
     cursor: pointer;
 }
 
-/* Hide default HTML checkbox */
 .switch-windows95 input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* The slider */
 .slider-windows95 {
     position: absolute;
     cursor: pointer;
     top: 2px;
     right: 2px;
     bottom: 2px;
-    width: 50px; /* Width of the slider thumb */
-    background-color: #c0c0c0; /* Windows 95 gray */
+    width: 50px;
+    background-color: #c0c0c0;
     border-top: 2px solid #808080;
     border-left: 2px solid #808080;
     border-right: 2px solid #fff;
     border-bottom: 2px solid #fff;
-    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 
 .slider-windows95:before {
     position: absolute;
     content: "";
-    height: 19px; /* Adjusted height */
-    width: 25px; /* Adjusted width */
+    height: 19px;
+    width: 25px;
     left: 0;
     bottom: 0;
-    background-color: #c0c0c0; /* Windows 95 gray */
+    background-color: #c0c0c0;
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
     border-right: 2px solid #808080;
     border-bottom: 2px solid #808080;
-    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 
 input:checked + .slider-windows95 {
-    background-color: #c0c0c0; /* Windows 95 gray */
+    background-color: #c0c0c0;
 }
 
 input:focus + .slider-windows95 {
-    box-shadow: 0 0 1px #2196f3; /* Blue focus for Windows 95 */
+    box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider-windows95:before {
-    -webkit-transform: translateX(16px); /* Move slider to the right */
-    -ms-transform: translateX(16px);
     transform: translateX(16px);
 }
 
-/* Text for the slider */
 .slider-text-windows95 {
     position: absolute;
-    left: 10px; /* Position text to the right of the slider */
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: black;
@@ -2238,13 +2136,8 @@ input:checked + .slider-windows95:before {
     white-space: nowrap;
 }
 
-.shabbat-toggle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-}
-
+/* --- Button Containers --- */
+.shabbat-toggle-container,
 .mobile-button-container {
     display: flex;
     align-items: center;
@@ -2280,19 +2173,41 @@ input:checked + .slider-windows95:before {
     background-color: #d0d0d0;
 }
 
+#dismiss-shabbat-overlay {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+#dismiss-shabbat-overlay:hover {
+    background-color: black;
+    color: white;
+}
+
+/* ==========================================================================
+   11. Media Queries
+   ========================================================================== */
+
+/* --- Tablet and Below --- */
 @media (max-width: 768px) {
+    /* Typography */
     h1 {
         font-size: 2.2rem;
     }
-
     h2 {
         font-size: 1.8rem;
     }
-
     h3 {
         font-size: 1.5rem;
     }
 
+    /* Spacing Adjustments */
     .p-20 {
         padding: 15px;
     }
@@ -2309,6 +2224,7 @@ input:checked + .slider-windows95:before {
         padding: 40px;
     }
 
+    /* Layout Adjustments */
     .grid-2,
     .grid-3 {
         grid-template-columns: 1fr;
@@ -2343,6 +2259,7 @@ input:checked + .slider-windows95:before {
         margin-bottom: 15px;
     }
 
+    /* Logo Adjustments */
     .logo {
         width: 100%;
         height: auto;
@@ -2356,6 +2273,7 @@ input:checked + .slider-windows95:before {
         max-width: 400px;
     }
 
+    /* Position Adjustments */
     .pinned-top {
         top: 10px;
     }
@@ -2426,6 +2344,11 @@ input:checked + .slider-windows95:before {
     .pen,
     .guestbook-baby {
         display: none;
+    }
+
+    /* Hide specific margin on mobile */
+    .political-compass-title.m-r-50 {
+        margin-right: 0;
     }
 
     /* Mobile Navigation Toggle */
@@ -2503,83 +2426,103 @@ input:checked + .slider-windows95:before {
     }
 
     .bio-page .nav-toggle-label::before {
-        background-image: url(../img/bullets/jewish.gif);
+        background-image: url("../img/bullets/jewish.gif");
     }
 
     .pics-page .nav-toggle-label::before {
-        background-image: url(../img/bullets/smilei.gif);
+        background-image: url("../img/bullets/smilei.gif");
     }
 
     .blog-page .nav-toggle-label::before {
-        background-image: url(../img/bullets/hotlist.gif);
+        background-image: url("../img/bullets/hotlist.gif");
     }
 
     .guestbook-page .nav-toggle-label::before {
-        background-image: url(../img/bullets/gbook.gif);
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
+        background-image: url("../img/bullets/gbook.gif");
     }
 
-    h2 {
-        font-size: 1.25rem;
+    /* Welcome wrapper mobile adjustments */
+    .welcome-wrapper img {
+        max-width: 80%;
+        height: auto;
     }
 
-    h3 {
-        font-size: 1rem;
+    .welcome-wrapper::after {
+        max-width: 80%;
+        height: auto;
+        right: 15%;
     }
 
-    .p-15 {
-        padding: 10px;
-    }
-
-    /* Exception for ruled paper background to maintain 15px padding */
+    /* Tablet-optimized ruled paper - use mobile background and no left margin */
     .bg-ruled-paper {
-        background-color: #ffffcc !important;
-        background: none; /* TEMPORARY CHANGE BECAUSE I CAN'T GET VERTICAL ALIGNMENT TO WORK */
-    }
-    .bg-ruled-paper.p-15 {
-        padding: 15px;
-    }
-    .bg-ruled-paper article {
-        margin-top: 3px;
-    }
-    .p-20 {
-        padding: 10px;
+        background-image: url("../img/tiles/ruledpaper_mobile.gif");
+        background-size: 1600px 26px; /* Keep original dimensions */
+        background-repeat: repeat-y;
+        background-position: top left;
+        background-color: #ffffcc;
+        padding: 26px 15px 15px 15px; /* Remove left margin - use normal padding */
+        position: relative;
     }
 
-    /* Center ruled paper background on mobile */
-    .bg-ruled-paper,
     .bg-ruled-paper-header {
-        background-position-x: center;
+        background-image: url("../img/tiles/ruledpaper-top_mobile.gif"); /* Use mobile header without red line */
+        background-size: 1600px auto; /* Keep original width, auto height */
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: #ffffcc;
+        padding: 26px 15px 15px 15px; /* Remove left margin - match main paper */
+        position: relative;
     }
 
-    /* Mobile responsive form field widths */
+    /* Keep consistent line-height for tablet alignment */
+    .bg-ruled-paper article p,
+    .bg-ruled-paper article h1,
+    .bg-ruled-paper article h3,
+    .bg-ruled-paper article ul,
+    .bg-ruled-paper article ol,
+    .bg-ruled-paper article br {
+        line-height: 26px; /* Match the background tile height exactly */
+    }
+
+    /* Position text to sit on blue lines for tablet */
+    .bg-ruled-paper article {
+        margin-top: 18px; /* Start text at the first blue line */
+    }
+
+    /* Form field adjustments */
     #display-name {
         width: 100%;
     }
 
     #comment {
-        width: 300px;
+        width: 100%;
     }
 
-    @media (max-width: 768px) {
-        #display-name {
-            width: 100%;
-        }
+    .comment-form {
+        width: 100%;
+    }
+}
 
-        #comment {
-            width: 100%;
-        }
-
-        .comment-form {
-            width: 100%;
-        }
+/* --- Mobile Phones --- */
+@media (max-width: 480px) {
+    /* Typography */
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    h3 {
+        font-size: 1rem;
     }
 
+    /* Spacing */
+    .p-15 {
+        padding: 10px;
+    }
+    .p-20 {
+        padding: 10px;
+    }
     .p-25 {
         padding: 15px;
     }
@@ -2596,4 +2539,51 @@ input:checked + .slider-windows95:before {
     body {
         padding: 15px;
     }
+
+    /* Mobile-optimized ruled paper - use mobile background and no left margin */
+    .bg-ruled-paper {
+        background-image: url("../img/tiles/ruledpaper_mobile.gif");
+        background-size: 1600px 26px; /* Keep original dimensions */
+        background-repeat: repeat-y;
+        background-position: top left;
+        background-color: #ffffcc;
+        padding: 26px 15px 15px 15px; /* Remove left margin - use normal padding */
+        position: relative;
+    }
+
+    .bg-ruled-paper-header {
+        background-image: url("../img/tiles/ruledpaper-top_mobile.gif"); /* Use mobile header without red line */
+        background-size: 1600px auto; /* Keep original width, auto height */
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-color: #ffffcc;
+        padding: 26px 15px 15px 15px; /* Remove left margin - match main paper */
+        position: relative;
+    }
+
+    /* Align text to blue lines - text should sit on the 19px mark (18px yellow + 1px blue) */
+    .bg-ruled-paper article p,
+    .bg-ruled-paper article h1,
+    .bg-ruled-paper article h3,
+    .bg-ruled-paper article ul,
+    .bg-ruled-paper article ol,
+    .bg-ruled-paper article br {
+        line-height: 26px; /* Match the background tile height exactly */
+    }
+
+    /* Adjust text positioning to sit on the blue line */
+    .bg-ruled-paper article {
+        margin-top: 18px; /* Start text at the first blue line */
+    }
+
+    /* Hide elements on very small screens */
+    .hide-mobile {
+        display: none;
+    }
 }
+
+/*
+==========================================================================
+  End of Stylesheet
+==========================================================================
+*/

@@ -3,132 +3,166 @@ document.addEventListener("DOMContentLoaded", () => {
   const guestbookForm = document.getElementById("guestbook-form");
   const formFeedback = document.getElementById("form-feedback");
 
-  function loadGuestbookEntries() {
-    const url =
-      "https://corsproxy.io/?https://docs.google.com/spreadsheets/d/e/2PACX-1vR6NMovjyP5XdnE-yN59kdL3Fgy8iLZF4FfVGuLfK9xwTEi0E_xVvxbvRRZJOLfSwPHKoQp5obY0G9_/pub?gid=1194882694&single=true&output=csv";
+  /**
+   * Load and display guestbook entries from Supabase
+   */
+  async function loadGuestbookEntries() {
+    // Show loading state
     guestbookEntries.innerHTML =
       '<img src="img/clipart/Advertise_Here.gif" id="loading-gif" alt="Loading..." />';
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+    try {
+      const result = await window.guestbookAPI.fetchGuestbookEntries();
 
-    fetch(url, { signal: controller.signal })
-      .then((response) => {
-        clearTimeout(timeoutId);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.text();
-      })
-      .then((data) => {
-        if (!data || !data.includes(",")) {
-          // Basic check for valid CSV
-          throw new Error("Invalid CSV data received.");
-        }
+      if (!result.success) {
+        throw new Error(result.error);
+      }
 
-        guestbookEntries.innerHTML = "";
-        function parseCSV(text) {
-          let lines = text.split("\n");
-          let result = [];
-          for (let i = 1; i < lines.length; i++) {
-            let currentline = lines[i].split(",");
-            result.push(currentline);
-          }
-          return result;
-        }
-        const rows = parseCSV(data);
+      // Clear loading state
+      guestbookEntries.innerHTML = "";
 
-        rows.reverse();
+      if (result.data.length === 0) {
+        guestbookEntries.innerHTML =
+          '<p style="color: var(--lime-green);">No entries yet. Be the first to sign the guestbook!</p>';
+        return;
+      }
 
-        rows.forEach((row) => {
-          if (row.length < 3) return;
-
-          const timestamp = row[0];
-          const message = row[1];
-          const name = row[2];
-
-          const entry = document.createElement("div");
-          entry.className = "bg-shadow";
-          entry.style =
-            "margin: 10px 0; padding: 10px; border: 1px solid var(--lime-green);";
-
-          const nameEl = document.createElement("div");
-          nameEl.style = "color: var(--lime-green); font-weight: bold;";
-          nameEl.textContent = name;
-
-          const dateEl = document.createElement("div");
-          dateEl.style = "color: var(--sun-yellow); font-size: 0.8rem;";
-          const date = new Date(timestamp);
-          dateEl.textContent = `Posted: ${date.toLocaleDateString()}`;
-
-          const messageEl = document.createElement("p");
-          messageEl.textContent = message;
-
-          entry.appendChild(nameEl);
-          entry.appendChild(dateEl);
-          entry.appendChild(messageEl);
-
-          guestbookEntries.appendChild(entry);
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching Google Sheet data:", error);
-        guestbookEntries.innerHTML = `<p>Error loading guestbook entries. Please try again.</p><button id="retry-button" class="retro-button">Retry</button>`;
-        document
-          .getElementById("retry-button")
-          .addEventListener("click", loadGuestbookEntries);
+      // Display entries (newest first - Supabase already returns them in that order)
+      result.data.forEach((entry) => {
+        const entryElement =
+          window.guestbookAPI.createGuestbookEntryElement(entry);
+        guestbookEntries.appendChild(entryElement);
       });
+    } catch (error) {
+      console.error("Error loading guestbook entries:", error);
+      guestbookEntries.innerHTML = `
+        <p style="color: var(--lime-green);">Error loading guestbook entries: ${error.message}</p>
+        <button id="retry-button" class="retro-button" style="margin-top: 10px;">
+          <i class="fas fa-redo"></i> Retry
+        </button>
+      `;
+
+      // Add retry functionality
+      const retryButton = document.getElementById("retry-button");
+      if (retryButton) {
+        retryButton.addEventListener("click", loadGuestbookEntries);
+      }
+    }
   }
 
-  guestbookForm.addEventListener("submit", (event) => {
+  /**
+   * Handle form submission to Supabase
+   */
+  async function handleFormSubmit(event) {
     event.preventDefault();
 
+    // Get form data
     const formData = new FormData(guestbookForm);
-    const name = formData.get("entry.641373449");
-    const message = formData.get("entry.1667421222");
-    const url =
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSebd_HdyhqPpo9V8Qg5tem2oNTLhIE4i8zoTlleDxiYBEfNJg/formResponse";
+    const displayName = formData.get("display_name");
+    const message = formData.get("message");
 
-    // Optimistic UI update
-    const entry = document.createElement("div");
-    entry.className = "guestbook-entry bg-shadow";
+    // Validate input
+    const validation = window.guestbookAPI.validateGuestbookInput(
+      displayName,
+      message,
+    );
 
-    const nameEl = document.createElement("div");
-    nameEl.style = "color: var(--lime-green); font-weight: bold;";
-    nameEl.textContent = name;
+    if (!validation.isValid) {
+      // Show validation errors
+      formFeedback.innerHTML = validation.errors
+        .map(
+          (error) => `<p style="color: #ff6b6b; margin: 2px 0;">• ${error}</p>`,
+        )
+        .join("");
+      formFeedback.style.display = "block";
+      return;
+    }
 
-    const dateEl = document.createElement("div");
-    dateEl.style = "color: var(--sun-yellow); font-size: 0.8rem;";
-    dateEl.textContent = `Posted: ${new Date().toLocaleDateString()}`;
+    // Clear any previous error messages
+    formFeedback.innerHTML = "";
+    formFeedback.style.display = "block";
+    formFeedback.innerHTML =
+      '<p style="color: var(--sun-yellow);"><i class="fas fa-spinner fa-spin"></i> Submitting...</p>';
 
-    const messageEl = document.createElement("p");
-    messageEl.textContent = message;
+    // Disable submit button to prevent double submissions
+    const submitButton = guestbookForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    submitButton.disabled = true;
+    submitButton.innerHTML =
+      '<i class="fas fa-spinner fa-spin"></i> Submitting...';
 
-    entry.appendChild(nameEl);
-    entry.appendChild(dateEl);
-    entry.appendChild(messageEl);
-
-    guestbookEntries.prepend(entry);
-
-    fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      body: new URLSearchParams(formData),
-    })
-      .then(() => {
-        formFeedback.textContent = "Thank you for your submission!";
-        guestbookForm.reset();
-        setTimeout(() => {
-          formFeedback.textContent = "";
-        }, 3000);
-      })
-      .catch((error) => {
-        console.error("Error submitting form:", error);
-        formFeedback.textContent =
-          "There was an error submitting your message. Please try again.";
-        entry.remove();
+    try {
+      // Create optimistic UI entry
+      const optimisticEntry = window.guestbookAPI.createGuestbookEntryElement({
+        display_name: validation.trimmedName,
+        message: validation.trimmedMessage,
+        created_at: new Date().toISOString(),
       });
-  });
+
+      // Add entry to the top of the list
+      if (
+        guestbookEntries.firstChild &&
+        guestbookEntries.firstChild.id !== "loading-gif"
+      ) {
+        guestbookEntries.insertBefore(
+          optimisticEntry,
+          guestbookEntries.firstChild,
+        );
+      } else {
+        guestbookEntries.innerHTML = "";
+        guestbookEntries.appendChild(optimisticEntry);
+      }
+
+      // Submit to Supabase
+      const result = await window.guestbookAPI.submitGuestbookEntry(
+        validation.trimmedName,
+        validation.trimmedMessage,
+      );
+
+      if (!result.success) {
+        // Handle rate limit specifically
+        if (result.waitTime) {
+          throw new Error(
+            `⏱️ ${result.error}. Please wait ${result.waitTime} seconds.`,
+          );
+        } else {
+          throw new Error(result.error);
+        }
+      }
+
+      // Success!
+      formFeedback.innerHTML =
+        '<p style="color: var(--lime-green);"><i class="fas fa-check"></i> Thank you for your submission!</p>';
+
+      // Reset form
+      guestbookForm.reset();
+
+      // Reload entries to get the real data (in case of any server-side processing)
+      setTimeout(() => {
+        loadGuestbookEntries();
+        formFeedback.innerHTML = "";
+        formFeedback.style.display = "none";
+      }, 2000);
+    } catch (error) {
+      console.error("Error submitting guestbook entry:", error);
+
+      // Remove optimistic entry if submission failed
+      const optimisticEntry = guestbookEntries.firstChild;
+      if (optimisticEntry && optimisticEntry.className === "bg-shadow") {
+        optimisticEntry.remove();
+      }
+
+      // Show error message
+      formFeedback.innerHTML = `<p style="color: #ff6b6b;"><i class="fas fa-exclamation-triangle"></i> ${error.message || "Failed to submit entry. Please try again."}</p>`;
+    } finally {
+      // Re-enable submit button
+      submitButton.disabled = false;
+      submitButton.innerHTML = originalButtonText;
+    }
+  }
+
+  // Set up form submission handler
+  guestbookForm.addEventListener("submit", handleFormSubmit);
 
   // Initial load of guestbook entries
   loadGuestbookEntries();

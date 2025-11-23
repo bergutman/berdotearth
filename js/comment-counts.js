@@ -1,35 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const commentCountElements = document.querySelectorAll('.comment-count');
-    if (commentCountElements.length === 0) return;
+/**
+ * Blog Comment Counts - Supabase Implementation
+ *
+ * This file replaces the Google Sheets-based comment count system with Supabase.
+ * It fetches comment counts for all posts and updates the display elements.
+ */
 
-    const url = 'https://corsproxy.io/?https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_tHMdbJbaRy6bD4zUJ4ktu0WCKvjOiJ62_U2XwFQp6I2uwPLpYlLyG08UVAllCd1ePSQcuctD-r1s/pub?gid=495620982&single=true&output=csv';
+document.addEventListener("DOMContentLoaded", () => {
+  /**
+   * Update comment counts for all blog posts on the page
+   */
+  async function updateAllCommentCounts() {
+    try {
+      // Get all unique post IDs from comment count elements
+      const commentCountElements = document.querySelectorAll('.comment-count[data-post-id]');
+      const postIds = Array.from(commentCountElements).map(el => el.dataset.postId);
 
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            const commentCounts = {};
-            const rows = data.split('\n').slice(1);
+      if (postIds.length === 0) return;
 
-            rows.forEach(row => {
-                const columns = row.split(',');
-                if (columns.length > 1) {
-                    const postId = columns[1];
-                    if (postId) {
-                        commentCounts[postId] = (commentCounts[postId] || 0) + 1;
-                    }
-                }
-            });
+      const result = await window.blogCommentsAPI.fetchBlogCommentCounts(postIds);
 
-            commentCountElements.forEach(element => {
-                const postId = element.dataset.postId;
-                const count = commentCounts[postId] || 0;
-                element.textContent = `${count} comments`;
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching comment counts:', error);
-            commentCountElements.forEach(element => {
-                element.textContent = 'N/A';
-            });
+      if (result.success) {
+        commentCountElements.forEach(element => {
+          const postId = element.dataset.postId;
+          const count = result.counts[postId] || 0;
+          element.textContent = `${count} ${count === 1 ? 'Comment' : 'Comments'}`;
         });
+      }
+    } catch (error) {
+      console.error("Error updating comment counts:", error);
+      // Fallback: set all counts to 0 on error
+      const commentCountElements = document.querySelectorAll('.comment-count[data-post-id]');
+      commentCountElements.forEach(element => {
+        element.textContent = '0 Comments';
+      });
+    }
+  }
+
+  // Update comment counts on page load
+  updateAllCommentCounts();
 });

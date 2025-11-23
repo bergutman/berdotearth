@@ -99,7 +99,7 @@
                         >
                         •
                         <i class="fas fa-comment"></i>
-                        <span class="comment-count" data-post-id="nuclear"
+                        <span class="comment-count" data-post-id="analsex"
                             >0 Comments</span
                         >
                     </p>
@@ -813,25 +813,27 @@
                             <input
                                 type="hidden"
                                 id="post-id-input"
-                                name="entry.690551426"
-                                value=""
+                                name="post_id"
+                                value="analsex"
                             />
                             <div class="form-group">
                                 <input
                                     type="text"
-                                    id="display-name"
-                                    name="entry.2022230315"
+                                    id="comment-name"
+                                    name="name"
                                     placeholder="Display Name"
                                     required
+                                    maxlength="100"
                                 />
                             </div>
                             <div class="form-group">
                                 <textarea
-                                    id="comment"
-                                    name="entry.141164213"
+                                    id="comment-message"
+                                    name="message"
                                     placeholder="Your comment..."
                                     rows="10"
                                     required
+                                    maxlength="10000"
                                 ></textarea>
                             </div>
                             <div style="text-align: center">
@@ -912,6 +914,13 @@
                 </div>
             </footer>
         </div>
-        <script src="../js/comments.js"></script>
+        <!-- Supabase SDK -->
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+        <!-- Blog Scripts -->
+        <script src="../js/supabase-client.js?v=20241122"></script>
+        <script src="../js/blog-comments-api.js?v=20241122"></script>
+        <script src="../js/blog-comments.js?v=20241122"></script>
+        <script src="../js/comment-counts.js?v=20241122"></script>
     </body>
 </html>
