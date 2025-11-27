@@ -238,116 +238,76 @@ function validateGuestbookInput(displayName, message) {
     errors.push("❌ Message must be 10,000 characters or less");
   }
 
-  // Technical security pattern detection (no content filtering)
-  const technicalPatterns = [
-    // URL patterns
-    /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi,
-    /(www\.)[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi,
-    /[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9]\.[a-zA-Z]{2,}/g,
+  // Only check for actual dangerous patterns, not common technical terms
+  const dangerousPatterns = [
+    // Actual SQL injection patterns (syntax, not words)
+    {
+      pattern:
+        /['"]\s*;\s*(UNION|SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|SCRIPT)\s*/gi,
+      message: "❌ Security Threat: SQL injection patterns are not allowed",
+    },
+    {
+      pattern: /['"]\s*OR\s*['"]\w*['"]\s*=\s*['"]\w*['"]\s*/gi,
+      message: "❌ Security Threat: SQL injection patterns are not allowed",
+    },
 
-    // Email patterns
-    /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g,
+    // Actual XSS patterns
+    {
+      pattern: /javascript\s*:/gi,
+      message:
+        "❌ Security Threat: JavaScript execution patterns are not allowed",
+    },
+    {
+      pattern: /on\w+\s*=\s*['"][^'"]*['"]/gi,
+      message: "❌ Security Threat: Event handler patterns are not allowed",
+    },
+    {
+      pattern: /<\s*script[^>]*>/gi,
+      message: "❌ Security Threat: Script tags are not allowed",
+    },
+    {
+      pattern: /<\s*iframe[^>]*>/gi,
+      message: "❌ Security Threat: Iframe tags are not allowed",
+    },
 
-    // Phone number patterns
-    /\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/g,
-    /\+\d{1,3}[-.]?\d{3}[-.]?\d{3}[-.]?\d{4}\b/g,
+    // Dangerous HTML tags only
+    {
+      pattern:
+        /<\s*\/?\s*(script|iframe|object|embed|form|input|button|link|meta|style)\b[^>]*>/gi,
+      message: "❌ Security Threat: Dangerous HTML tags are not allowed",
+    },
 
-    // SQL injection patterns (only actual dangerous syntax, not individual words)
-    /['"]\s*;\s*(UNION|SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|SCRIPT)\s*/gi,
-    /['"]\s*OR\s*['"]\w*['"]\s*=\s*['"]\w*['"]\s*/gi,
+    // Actual URLs (not conceptual mentions)
+    {
+      pattern: /https?:\/\/[^\s]+/gi,
+      message: "❌ URLs are not allowed - please share website names instead",
+    },
 
-    // XSS patterns
-    /javascript:/gi,
-    /on\w+\s*=/gi,
-    /<\s*script/gi,
-    /<\s*iframe/gi,
+    // Actual email addresses (not conceptual mentions)
+    {
+      pattern: /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g,
+      message: "❌ Email addresses are not allowed",
+    },
 
-    // HTML/BBCode tags
-    /<[^>]*>/g,
-    /\[\/?[^]]*\]/g,
-
-    // Markdown/Code blocks
-    /```[\s\S]*?```/g,
-    /`[^`]+`/g,
-
-    // Excessive repeated characters (for readability only)
-    /([!?]){6,}/g,
-    /([a-zA-Z0-9])\1{7,}/g,
+    // Actual phone numbers
+    {
+      pattern: /\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/g,
+      message: "❌ Phone numbers are not allowed",
+    },
+    {
+      pattern: /\+\d{1,3}[-.]?\d{3}[-.]?\d{3}[-.]?\d{4}\b/g,
+      message: "❌ Phone numbers are not allowed",
+    },
   ];
 
-  // Check for technical patterns in both name and message
+  // Check for dangerous patterns in both name and message
   const combinedText = `${trimmedName} ${trimmedMessage}`;
 
-  technicalPatterns.forEach((pattern) => {
+  dangerousPatterns.forEach(({ pattern, message: errorMessage }) => {
     if (pattern.test(combinedText)) {
-      if (
-        pattern.source.includes("javascript") ||
-        pattern.source.includes("on\\w+") ||
-        pattern.source.includes("<\\s*script")
-      ) {
-        errors.push(
-          "❌ Security Threat: JavaScript/XSS patterns are not allowed for security reasons",
-        );
-      } else if (pattern.source.includes("UNION|SELECT|INSERT")) {
-        errors.push(
-          "❌ Security Threat: SQL injection patterns are not allowed",
-        );
-      } else if (
-        pattern.source.includes("<[^>]*>") ||
-        pattern.source.includes("\\[\\/[^]]*\\]")
-      ) {
-        errors.push(
-          "❌ HTML/BBCode tags are not allowed - please use plain text only",
-        );
-      } else if (
-        pattern.source.includes("https?://") ||
-        pattern.source.includes("@") ||
-        pattern.source.includes("\\d{3}")
-      ) {
-        // Check specifically what was found to give a more precise error
-        if (
-          combinedText.match(/https?:\/\/[^\s]+/gi) ||
-          combinedText.match(/www\.[^\s]+/gi)
-        ) {
-          errors.push(
-            "❌ URLs are not allowed - please share website links in your message text instead",
-          );
-        } else if (
-          combinedText.match(/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}/g)
-        ) {
-          errors.push("❌ Email addresses are not allowed");
-        } else if (combinedText.match(/\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/g)) {
-          errors.push("❌ Phone numbers are not allowed");
-        } else {
-          errors.push("❌ URLs, emails, and phone numbers are not allowed");
-        }
-      } else if (
-        pattern.source.includes("```") ||
-        pattern.source.includes("`[^`]+`")
-      ) {
-        errors.push(
-          "❌ Code blocks are not allowed - please describe code in plain text instead",
-        );
-      } else {
-        errors.push(
-          "❌ Invalid formatting detected - please use plain text only",
-        );
-      }
+      errors.push(errorMessage);
     }
   });
-
-  // Message length validation (updated to 1-10,000 characters)
-  if (trimmedMessage.length < 1) {
-    errors.push("❌ Message is required (minimum 1 character)");
-  }
-
-  // Check for excessive character repetition (only for readability)
-  const repeatedChars = trimmedMessage.match(/(.)\1{6,}/g);
-  if (repeatedChars && repeatedChars.length > 1) {
-    errors.push(
-      "❌ Please reduce excessive character repetition (e.g., 'aaaaaa', '????????')",
-    );
-  }
 
   return {
     isValid: errors.length === 0,

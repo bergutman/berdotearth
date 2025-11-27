@@ -33,20 +33,40 @@ BEGIN
 
   -- Only block actual XSS patterns
   IF NEW.message ~* 'javascript\s*:' OR
-     NEW.message ~* 'on\w+\s*=\s*' OR
+     NEW.message ~* 'on\w+\s*=\s*[''"][^''"]*[''"]' OR
      NEW.message ~* '<\s*script[^>]*>' OR
      NEW.message ~* '<\s*iframe[^>]*>' OR
      NEW.display_name ~* 'javascript\s*:' OR
-     NEW.display_name ~* 'on\w+\s*=\s*' OR
+     NEW.display_name ~* 'on\w+\s*=\s*[''"][^''"]*[''"]' OR
      NEW.display_name ~* '<\s*script[^>]*>' OR
      NEW.display_name ~* '<\s*iframe[^>]*>' THEN
     RAISE EXCEPTION 'Security: Potential XSS attack detected';
   END IF;
 
   -- Allow HTML tags that are safe, but block script tags
-  IF NEW.message ~* '<\s*/?\s*(script|iframe|object|embed|form|input|button|link|meta|style)\b[^>]*>' OR
-     NEW.display_name ~* '<\s*/?\s*(script|iframe|object|embed|form|input|button|link|meta|style)\b[^>]*>' THEN
+  IF NEW.message ~* '<\s*\/?\s*(script|iframe|object|embed|form|input|button|link|meta|style)\b[^>]*>' OR
+     NEW.display_name ~* '<\s*\/?\s*(script|iframe|object|embed|form|input|button|link|meta|style)\b[^>]*>' THEN
     RAISE EXCEPTION 'Security: Dangerous HTML tags are not allowed';
+  END IF;
+
+  -- Block actual URLs (not conceptual mentions)
+  IF NEW.message ~* 'https?:\/\/[^\s]+' OR
+     NEW.display_name ~* 'https?:\/\/[^\s]+' THEN
+    RAISE EXCEPTION 'Security: URLs are not allowed';
+  END IF;
+
+  -- Block actual email addresses (not conceptual mentions)
+  IF NEW.message ~* '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b' OR
+     NEW.display_name ~* '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b' THEN
+    RAISE EXCEPTION 'Security: Email addresses are not allowed';
+  END IF;
+
+  -- Block actual phone numbers
+  IF NEW.message ~* '\b\d{3}[-.]?\d{3}[-.]?\d{4}\b' OR
+     NEW.message ~* '\+\d{1,3}[-.]?\d{3}[-.]?\d{3}[-.]?\d{4}\b' OR
+     NEW.display_name ~* '\b\d{3}[-.]?\d{3}[-.]?\d{4}\b' OR
+     NEW.display_name ~* '\+\d{1,3}[-.]?\d{3}[-.]?\d{3}[-.]?\d{4}\b' THEN
+    RAISE EXCEPTION 'Security: Phone numbers are not allowed';
   END IF;
 
   RETURN NEW;
