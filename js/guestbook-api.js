@@ -252,10 +252,9 @@ function validateGuestbookInput(displayName, message) {
     /\b\d{3}[-.]?\d{3}[-.]?\d{4}\b/g,
     /\+\d{1,3}[-.]?\d{3}[-.]?\d{3}[-.]?\d{4}\b/g,
 
-    // SQL injection patterns
-    /(\b(UNION|SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|SCRIPT)\b)/gi,
-    /['"]\s*(OR|AND)\s*['"]\w*['"]\s*=\s*['"]\w*['"]\s*/gi,
-    /\b(OR|AND)\s+\d+\s*=\s*\d+/gi,
+    // SQL injection patterns (only actual dangerous syntax, not individual words)
+    /['"]\s*;\s*(UNION|SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|SCRIPT)\s*/gi,
+    /['"]\s*OR\s*['"]\w*['"]\s*=\s*['"]\w*['"]\s*/gi,
 
     // XSS patterns
     /javascript:/gi,

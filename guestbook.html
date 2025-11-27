@@ -13,12 +13,12 @@
         <script src="js/grass.js"></script>
         <link href="https://github.com/bergutman" rel="me" />
     </head>
-    <body class="bg-rainbow-clouds bg-repeat text-green guestbook-page">
+    <body class="bg-medieval bg-repeat text-green guestbook-page">
         <div
-            class="relative max-w-900 m-t-0 m-r-a m-b-0 m-l-a bg-waterfall bg-repeat border-double border-green"
+            class="relative max-w-900 m-t-0 m-r-a m-b-0 m-l-a bg-old-paper bg-repeat border-double border-green"
         >
             <header
-                class="relative p-t-0 p-r-20 p-b-80 p-l-20 text-center bg-mountain bg-center"
+                class="relative p-t-0 p-r-20 p-b-80 p-l-20 text-center bg-wizzard bg-center"
             >
                 <!-- Marquee -->
                 <div class="marquee-container">
@@ -36,34 +36,37 @@
                 ></div>
             </header>
             <nav
-                class="bg-leaves bg-repeat border-top-double border-bottom-double border-green"
+                class="bg-stones bg-repeat border-top-double border-bottom-double border-green"
             >
                 <input type="checkbox" id="nav-toggle" class="hidden" />
                 <label for="nav-toggle" class="nav-toggle-label">Menu</label>
                 <div class="nav-links">
                     <ul class="flex">
                         <li>
-                            <a class="bg-rbow bg-repeat" href="index.html">
+                            <a class="bg-scroll bg-repeat" href="index.html">
                                 <img src="img/bullets/dolph.gif" /> Home
                             </a>
                         </li>
                         <li>
-                            <a class="bg-rbow bg-repeat" href="bio.html">
+                            <a class="bg-scroll bg-repeat" href="bio.html">
                                 <img src="img/bullets/jewish.gif" /> Bio
                             </a>
                         </li>
                         <li>
-                            <a class="bg-rbow bg-repeat" href="pics.html">
+                            <a class="bg-scroll bg-repeat" href="pics.html">
                                 <img src="img/bullets/smilei.gif" /> Pics
                             </a>
                         </li>
                         <li>
-                            <a class="bg-rbow bg-repeat" href="blog.html">
+                            <a class="bg-scroll bg-repeat" href="blog.html">
                                 <img src="img/bullets/hotlist.gif" /> Blog
                             </a>
                         </li>
                         <li>
-                            <a class="bg-rbow bg-repeat" href="guestbook.html">
+                            <a
+                                class="bg-scroll bg-repeat"
+                                href="guestbook.html"
+                            >
                                 <img src="img/bullets/gbook.gif" /> Guestbook
                             </a>
                         </li>
@@ -72,15 +75,15 @@
             </nav>
             <div class="flex p-15">
                 <div
-                    class="w-30 min-w-180 m-r-15 p-15 bg-ivy bg-repeat border-groove border-green"
+                    class="w-30 min-w-180 m-r-15 p-15 bg-stones bg-repeat border-groove border-green"
                 >
                     <div
-                        class="m-b-20 bg-grass border-groove border-green text-center"
+                        class="m-b-20 bg-scroll border-groove border-green text-center"
                     >
-                        <div class="widget-title bg-fern p-10">
+                        <div class="widget-title bg-red-cross p-10">
                             Guestbook Info
                         </div>
-                        <div class="widget-content">
+                        <div class="widget-content text-black">
                             <p class="p-15">
                                 Welcome to my guestbook! I don't remove anything
                                 unless it's hate speech or spam.
@@ -103,9 +106,9 @@
                         <img src="img/clipart/friend_on.gif" />
                     </div>
                     <div
-                        class="m-b-20 bg-grass border-groove border-green text-center"
+                        class="m-b-20 bg-scroll border-groove border-green text-center"
                     >
-                        <div class="widget-title bg-fern p-10">
+                        <div class="widget-title bg-red-cross p-10">
                             Visitor Counter
                         </div>
                         <img src="img/clipart/globe.gif" />
@@ -113,29 +116,12 @@
                             <i class="fas fa-eye"></i> Guests:
                             <span>000001</span>
                         </div>
-                        <div
-                            class="m-t-10 text-center"
-                            style="font-size: 11px; opacity: 0.8"
-                        >
-                            <p style="margin: 0">
-                                PRIVACY NOTICE: No IPs or personal data is
-                                logged! Your browser session is hashed for
-                                anonymity.
-                            </p>
-                            <p style="margin: 5px 0 0 0">
-                                <a
-                                    href="https://github.com/bergutman/berdotearth"
-                                    target="_blank"
-                                    >CLICK HERE TO AUDIT THE CODE YOURSELF</a
-                                >
-                            </p>
-                        </div>
                     </div>
                 </div>
                 <div class="flex-1">
                     <div
                         id="guestbook-entries"
-                        class="p-15 border-groove border-green bg-waterfall"
+                        class="p-15 border-groove border-green bg-torch"
                         style="text-align: center"
                     >
                         <img
@@ -144,16 +130,12 @@
                             alt="Loading..."
                         />
                     </div>
-                    <div class="m-t-20 p-15 border-solid border-green bg-ivy">
-                        <form
-                            id="guestbook-form"
-                            class="m-t-20 p-15 border-solid border-green bg-leaves"
-                        >
+                    <div class="m-t-20 border-groove border-green bg-scroll">
+                        <div class="widget-title bg-red-cross p-10">
+                            <i class="fas fa-pencil-alt"></i> Sign My Guestbook
+                        </div>
+                        <form id="guestbook-form" class="p-15 text-black">
                             <div class="m-b-15">
-                                <h3>
-                                    <i class="fas fa-pencil-alt"></i> Sign My
-                                    Guestbook
-                                </h3>
                                 <label
                                     class="block m-b-5 color-green"
                                     for="display-name"
@@ -182,12 +164,7 @@
                                     maxlength="10000"
                                     required
                                 ></textarea>
-                                <small
-                                    style="
-                                        color: var(--lime-green);
-                                        font-size: 0.8rem;
-                                    "
-                                >
+                                <small style="font-size: 0.8rem">
                                     No URLs/emails/phone numbers allowed • Max
                                     10,000 characters
                                 </small>
@@ -224,9 +201,8 @@
                 </div>
             </div>
             <footer
-                class="p-15 text-center bg-jungle bg-no-repeat border-top-double border-green"
+                class="p-15 text-center bg-castle-defense border-top-double border-green"
             >
-                <img src="img/clipart/animaldomain.gif" />
                 <p>Copyright is for weenies lol.</p>
                 <p>
                     <a class="text-inherit" href="mailto:bergutman@pm.me"

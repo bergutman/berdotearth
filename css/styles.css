@@ -713,34 +713,98 @@ h3 {
 }
 
 /* Tiled/Image Backgrounds */
-.bg-lightning {
-    background: url("../img/tiles/light.jpg");
-}
 .bg-cardboard {
-    background-image: url("../img/tiles/cardbd.jpg");
+    background-image: url("../img/tiles/cardboard.jpg");
+}
+.bg-eden {
+    background: url("../img/clipart/eden.gif");
+    background-size: cover;
+    background-position: center;
+    background-position: no-repeat;
+}
+.bg-eden-alt {
+    background: url("../img/clipart/eden_2.gif");
+    background-size: cover;
+    background-position: center;
+    background-position: no-repeat;
+}
+.bg-stones {
+    background: url("../img/tiles/stones.jpg");
+}
+.bg-bricks {
+    background: url("../img/tiles/brick.jpg");
+}
+.bg-jesus-brick {
+    background: url("../img/tiles/jesus_brick.gif");
+}
+.bg-castle-defense {
+    background:
+        url("../img/clipart/castle_defense.gif") repeat-x,
+        url("../img/clipart/montypython.gif") repeat-x;
+    background-position:
+        bottom,
+        top center;
+    background-size: auto, contain;
+    padding: 275px 0 0 0;
+}
+.bg-fabric-paper {
+    background: url("../img/tiles/fabric_paper.jpg");
+}
+.bg-runescape-ui {
+    background: url("../img/clipart/runescape-interface.png");
+}
+.bg-old-paper {
+    background: url("../img/clipart/fantasy_paper.jpg");
+}
+.bg-torch {
+    background: url("../img/tiles/torch.gif");
+    background-position: bottom;
+}
+.bg-rock {
+    background: url("../img/tiles/rock.jpg");
+}
+.bg-fancy-book {
+    background: url("../img/tiles/fancy_book.jpg");
+}
+.bg-fantasy-paper {
+    background: url("https://plaisance.neocities.org/bg/bg_flowertile.jpg");
+}
+.bg-fantasy-paper-plain {
+    background: url("../img/tiles/fantasy_paper.jpeg");
+}
+.bg-wizzard {
+    background: url("../img/clipart/wizzard.gif");
+}
+.bg-medieval {
+    background: url("../img/clipart/medieval.jpeg");
+    background-size: contain;
+}
+.bg-bamboo {
+    background: url("../img/clipart/bamboo.gif");
+    background-size: contain;
 }
 .bg-ocean {
-    background-image: url("../img/tiles/strand.jpg");
+    background-image: url("../img/tiles/beach.jpg");
 }
 .bg-feet {
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-        url("../img/tiles/bgfeet.gif");
+        url("../img/tiles/feet.gif");
 }
 .bg-cloudy {
-    background-image: url("../img/tiles/bgsuncloud.jpg");
+    background-image: url("../img/tiles/cloudy.jpg");
 }
 .bg-sunset {
-    background: url("../img/tiles/bgsunset.jpg");
+    background: url("../img/tiles/sunset.jpg");
 }
 .bg-pines {
-    background-image: url("../img/tiles/bgpinetrees.gif");
+    background-image: url("../img/tiles/pines.gif");
 }
 .bg-wood {
     background-image: url("../img/tiles/wood.jpg");
 }
 .bg-wood-alt {
-    background-image: url("../img/tiles/wood2.jpg");
+    background-image: url("../img/tiles/wood_alt.jpg");
 }
 .bg-mountain {
     background-image: url("../img/tiles/mountain.gif");
@@ -749,55 +813,52 @@ h3 {
     background-image: url("../img/tiles/matzo.gif");
 }
 .bg-chinese {
-    background-image: url("../img/tiles/bgchinese.gif");
+    background-image: url("../img/tiles/chinese.gif");
 }
 .bg-jungle-paper {
-    background-image: url("../img/tiles/jungle.gif");
-}
-.bg-jungle-paper-alt {
-    background-image: url("../img/tiles/junglepap1.jpg");
+    background-image: url("../img/tiles/jungle_paper.gif");
 }
 .bg-jungle-animals {
     background-image: url("../img/clipart/bigpost.jpg");
 }
 .bg-shells {
-    background: url("../img/tiles/bgshells.gif");
+    background: url("../img/tiles/shells.gif");
 }
 .bg-stars {
     background: url("../img/tiles/stars.gif");
 }
 .bg-marijuana {
-    background: url("../img/tiles/starfeil.gif");
+    background: url("../img/tiles/marijuana.gif");
 }
-.bg-shobu {
-    background: url("../img/tiles/bgshobu.jpg");
+.bg-flower-paper {
+    background: url("../img/tiles/flower_paper.jpg");
+}
+.bg-red-cross {
+    background: url("../img/tiles/red_cross.jpg");
+}
+.bg-scroll {
+    background: url("../img/tiles/scroll.jpg");
 }
 .bg-white-paper {
-    background: url("../img/tiles/whitepaper.gif");
+    background: url("../img/tiles/paper_white.gif");
 }
 .bg-smiley {
-    background: url("../img/tiles/bgsmiley2.gif");
+    background: url("../img/tiles/smiley.gif");
 }
 .bg-smiley-animated {
-    background: url("../img/tiles/smileys03.gif");
-}
-.bg-parrots {
-    background: url("../img/tiles/bgparrots.gif");
+    background: url("../img/tiles/smiley_animated.gif");
 }
 .bg-waterfall {
     background: url("../img/tiles/waterfall.jpg");
 }
 .bg-jesus {
-    background: url("../img/tiles/bgjesus.jpg");
+    background: url("../img/tiles/jesus.jpg");
 }
 .bg-village {
-    background-image: url("../img/tiles/bgoz.gif");
+    background-image: url("../img/tiles/village.gif");
 }
 .bg-grass {
     background: url("../img/tiles/grass.gif");
-}
-.bg-slime {
-    background: url("../img/tiles/bgM003.gif");
 }
 .bg-ivy {
     background: url("../img/tiles/ivy.jpg");
@@ -806,19 +867,19 @@ h3 {
     background: url("../img/tiles/fern.gif");
 }
 .bg-leaves {
-    background: url("../img/tiles/leaves2.gif");
+    background: url("../img/tiles/leaves.gif");
 }
 .bg-turquoise {
     background: url("../img/tiles/0.jpg");
 }
 .bg-blue-swirl {
-    background: url("../img/tiles/1w.jpg");
+    background: url("../img/tiles/blue_swirl.jpg");
 }
 .bg-brown-paper {
     background: url("../img/tiles/paper.jpg");
 }
 .bg-water-bright {
-    background: url("../img/tiles/bgblue.png");
+    background: url("../img/tiles/water_bright.png");
 }
 .bg-beach-from-above {
     background:
@@ -835,42 +896,33 @@ h3 {
     background-size: contain;
 }
 .bg-ruled-paper {
-    background: url("../img/tiles/ruledpaper.gif");
+    background: url("../img/tiles/ruled_paper.gif");
     padding: 19px 15px 15px 23%;
 }
 .bg-ruled-paper-header {
-    background: url("../img/tiles/ruledpaper-top.gif");
+    background: url("../img/tiles/ruled_paper_top.gif");
     padding: 19px 15px 15px 23%;
 }
 .bg-smoky-leaves {
-    background: url("../img/tiles/bgcoleaves.jpg");
+    background: url("../img/tiles/leaves_smoky.jpg");
 }
 .bg-shore {
-    background: url("../img/tiles/b_fly_02.jpg");
+    background: url("../img/tiles/shore.jpg");
     background-size: 100% 100%;
 }
-.bg-indian-pattern {
-    background: url("../img/tiles/indian_bk.gif");
-}
-.bg-coffee-plant {
-    background: url("../img/tiles/coffeeplant.jpg");
-}
 .bg-flag-paper {
-    background: url("../img/tiles/flagpaper.jpg");
+    background: url("../img/tiles/rainbow_paper.jpg");
 }
 .bg-water {
     background: url("../img/tiles/water.jpg");
 }
 .bg-super-nova {
-    background: url("../img/tiles/bg_index.jpg");
+    background: url("../img/tiles/super_nova.jpg");
     background-position: center;
     background-size: contain;
 }
 .bg-seashore {
-    background-image: url("../img/tiles/seashore.gif");
-}
-.bg-blue-star-paper {
-    background: url("../img/tiles/t5.gif");
+    background-image: url("../img/tiles/sea_shore.gif");
 }
 .bg-dolphins {
     background: url("../img/tiles/dolphins.jpg");
@@ -878,7 +930,7 @@ h3 {
 .bg-sand {
     background:
         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
-        url("../img/tiles/sand_bkg.jpg");
+        url("../img/tiles/sand.jpg");
 }
 .bg-sand-alt {
     background: url("../img/tiles/bgbeach4.gif");
@@ -886,39 +938,36 @@ h3 {
     background-repeat: repeat;
 }
 .bg-green-sand {
-    background: url("../img/tiles/sand.jpg");
+    background: url("../img/tiles/green_sand.jpg");
     background-size: contain;
     background-repeat: repeat;
 }
 .bg-orchid {
-    background: url("../img/tiles/orchid12.jpg");
+    background: url("../img/tiles/orchid.jpg");
 }
 .bg-rainbow-paper {
-    background: url("../img/tiles/qnet-bg.gif");
-}
-.bg-pastel-paper {
-    background: url("../img/tiles/pastelpap.jpg");
+    background: url("../img/tiles/rainbow_paper.gif");
 }
 .bg-black-smoke {
-    background: url("../img/tiles/bgblacksmoke.jpg");
+    background: url("../img/tiles/black_smoke.jpg");
 }
 .bg-gold-bars {
-    background: url("../img/tiles/goldbarpattern.png");
+    background: url("../img/tiles/gold_bars.png");
 }
 .bg-steel-cones {
-    background: url("../img/tiles/bgsteelcones.gif");
+    background: url("../img/tiles/steel_cones.gif");
 }
 .bg-hearts {
-    background: url("../img/tiles/bgcolhearts2.gif");
+    background: url("../img/tiles/hearts_small.gif");
 }
 .bg-beanie-babies {
-    background: url("../img/tiles/bgbeanies.gif");
+    background: url("../img/tiles/beanies.gif");
 }
 .bg-purple {
     background: url("../img/tiles/purple.gif");
 }
 .bg-teddy {
-    background-image: url("../img/tiles/bgteddy.jpg");
+    background-image: url("../img/tiles/teddy_bear.jpg");
 }
 .bg-bass {
     background: url("../img/tiles/bass.gif");
@@ -926,172 +975,137 @@ h3 {
     background-size: 40%;
 }
 .bg-bears {
-    background-image: url("../img/tiles/bgteddy.jpg");
+    background-image: url("../img/tiles/teddy_bears.gif");
 }
 .bg-polar-bears {
-    background-image: url("../img/tiles/bgpolar.gif");
-}
-.bg-cotton-swirl {
-    background: url("../img/tiles/bgcottonpadtwisted.gif");
+    background-image: url("../img/tiles/polar_bear.gif");
 }
 .bg-island {
     background: url("../img/tiles/island.jpg");
 }
 .bg-rbow {
-    background: url("../img/tiles/bgrbow.jpg");
+    background: url("../img/tiles/rainbow.jpg");
 }
 .bg-rbow-swirl {
-    background: url("../img/tiles/bgrbowswirl.gif");
+    background: url("../img/tiles/rainbow_smoke.gif");
 }
 .bg-dark-moon {
-    background: url("../img/tiles/darkmoon.gif");
+    background: url("../img/tiles/dark_moon.gif");
 }
 .bg-beach-alt {
-    background: url("../img/tiles/bgbeach4.gif");
+    background: url("../img/tiles/beach_alt.gif");
 }
 .bg-hkitty {
-    background: url("../img/tiles/hkitty.jpg");
+    background: url("../img/tiles/hello_kitty.jpg");
 }
 .bg-grimace {
     background: url("../img/tiles/grimace.gif");
 }
-.bg-mcd {
-    background: url("../img/tiles/nomcd.gif"), black;
-}
 .bg-cds {
-    background: url("../img/tiles/bgcds.jpg");
+    background: url("../img/tiles/cds.jpg");
 }
 .bg-binary-swirl {
-    background: url("../img/tiles/binaryswirl.jpg");
+    background: url("../img/tiles/binary_swirl.jpg");
 }
 .bg-shark-tooth {
-    background: url("../img/tiles/sharktooth.jpg");
+    background: url("../img/tiles/shark_tooth.jpg");
 }
 .bg-green-palm {
-    background: url("../img/tiles/bgreenpalm.gif");
-}
-.bg-paper-con {
-    background: url("../img/tiles/conbg.jpg");
-}
-.bg-paper-questionmark {
-    background: url("../img/tiles/interrogante.gif");
+    background: url("../img/tiles/palm.gif");
 }
 .bg-paper-leaf {
-    background: url("../img/tiles/leafpaper.gif");
+    background: url("../img/tiles/leaf_paper.gif");
 }
 .bg-paper-flowers {
-    background: url("../img/tiles/Backgd03.jpg");
+    background: url("../img/tiles/paper_flowers.jpg");
 }
-.bg-square-tile {
-    background: url("../img/tiles/a1.gif");
-}
-.bg-atoms {
-    background: url("../img/tiles/atoms.jpg");
+.bg-flower-field {
+    background: url("../img/tiles/flower_field.gif");
 }
 .bg-rainbow-clouds {
-    background: url("../img/tiles/b30.gif");
+    background: url("../img/tiles/rainbow_clouds.gif");
 }
 .bg-bible {
-    background: url("../img/tiles/bgbible.jpg");
+    background: url("../img/tiles/bible.jpg");
 }
 .bg-smoke-blue {
-    background: url("../img/tiles/bgblueop.gif");
+    background: url("../img/tiles/blue_smoke.gif");
 }
 .bg-ethereal {
-    background: url("../img/tiles/bgbluewh.gif");
+    background: url("../img/tiles/ether.gif");
 }
 .bg-faded-clouds {
-    background: url("../img/tiles/bgclouds44.jpg");
+    background: url("../img/tiles/clouds_faded.jpg");
 }
 .bg-egypt {
-    background: url("../img/tiles/bgegypt.gif");
+    background: url("../img/tiles/egypt.gif");
 }
 .bg-fallen {
-    background: url("../img/tiles/bgfallen.jpg");
+    background: url("../img/tiles/fallen.jpg");
     background-position: center;
     background-size: 50%;
 }
 .bg-floral {
-    background: url("../img/tiles/bgfloral.jpg");
-}
-.bg-purple-sky {
-    background: url("../img/tiles/bgpurpclouds.gif");
-}
-.bg-blue-circuit {
-    background: url("../img/tiles/bluecircuit.jpg");
+    background: url("../img/tiles/floral.jpg");
 }
 .bg-eyeball {
-    background: url("../img/tiles/blackball0011.gif");
+    background: url("../img/tiles/eyeball.gif");
 }
 .bg-text {
     background-image: url("../img/tiles/text.jpg");
 }
 .bg-faded-paper {
-    background: url("../img/tiles/fadedtext.jpg");
+    background: url("../img/tiles/text_faded.jpg");
 }
 .bg-red-sky {
-    background: url("../img/tiles/redsky.jpg");
+    background: url("../img/tiles/red_sky.jpg");
 }
 .bg-checkered-swirl {
-    background: url("../img/tiles/checkbig.gif");
+    background: url("../img/tiles/checkers_swirl.gif");
 }
 .bg-crystal {
-    background: url("../img/tiles/ESCENE42.gif");
+    background: url("../img/tiles/crystal.gif");
 }
 .bg-fire {
     background: url("../img/tiles/fire.jpg");
 }
 .bg-metal-water {
-    background: url("../img/tiles/bgwaterdrops.gif");
+    background: url("../img/tiles/water_metal.gif");
 }
 .bg-panda {
-    background: url("../img/tiles/Panheart.gif");
+    background: url("../img/tiles/panda.gif");
 }
 .bg-jungle {
-    background-image: url("../img/tiles/Jungle.jpg");
+    background-image: url("../img/tiles/jungle.jpg");
     background-size: 100% auto;
     background-position: bottom;
-}
-.bg-jungle-alt {
-    background: url("../img/tiles/sfondo10.jpg");
-}
-.bg-tiger {
-    background: url("../img/tiles/bgtigerface.gif");
-}
-.bg-veg {
-    background-image: url("../img/tiles/set23b_backb.jpg");
-    background-size: 100% auto;
-    background-repeat: repeat-y;
 }
 .bg-okinawa {
     background: url("../img/tiles/okinawa.gif");
 }
 .bg-eagle {
-    background: url("../img/tiles/eaglebkgd2.jpg");
+    background: url("../img/tiles/eagle.jpg");
 }
 .bg-flakes {
     background: url("../img/tiles/flakes.gif");
 }
 .bg-rainbow {
-    background: url("../img/tiles/rainbow-background.gif");
+    background: url("../img/tiles/rainbow_animated.gif");
 }
 .bg-clouds {
     background: url("../img/tiles/clouds.gif");
 }
 .bg-clouds-alt {
-    background: url("../img/tiles/clouds4.jpg");
-}
-.bg-summer {
-    background: url("../img/tiles/summer_p.gif");
+    background: url("../img/tiles/clouds_alt.jpg");
 }
 .bg-crossing-man {
-    background: url("../img/tiles/backs.gif");
+    background: url("../img/tiles/crossing_man.gif");
 }
 .bg-purple-star {
-    background: url("../img/tiles/pentback.gif");
+    background: url("../img/tiles/purple_stars.gif");
 }
 .bg-beer {
-    background: url("../img/tiles/budglass.jpg");
+    background: url("../img/tiles/beer.jpg");
     background-size: 40%;
 }
 
@@ -1693,11 +1707,10 @@ nav a:hover {
 
 .counter {
     padding: 5px;
-    border: 1px solid var(--blood-red);
-    background-color: black;
-    color: var(--lime-green);
+    color: var(--background-black);
     font-family: "Courier New", monospace;
     text-align: center;
+    font-weight: bold;
 }
 
 .counter-icon {
@@ -1741,11 +1754,14 @@ nav a:hover {
     height: 129px;
     background-image: url("../img/clipart/mezuzah.gif");
 }
-
+.guestbook-footer-img {
+    width: 100px;
+    margin: 150px auto 50px auto;
+}
 .guestbook-baby {
-    width: 163px;
-    height: 125px;
-    background-image: url("../img/clipart/guestbookbeaniebaby.gif");
+    width: 118px;
+    height: 142px;
+    background-image: url("../img/clipart/gnome-child.png");
 }
 
 /* Guestbook page specific widget title styling */
@@ -2389,7 +2405,7 @@ input:checked + .slider-windows95:before {
 
     /* Page-specific mobile menu button styles */
     .home-page .nav-toggle-label {
-        background: url(../img/tiles/orchid12.jpg);
+        background: url(../img/tiles/orchid.jpg);
     }
 
     .bio-page .nav-toggle-label {
@@ -2397,7 +2413,7 @@ input:checked + .slider-windows95:before {
     }
 
     .pics-page .nav-toggle-label {
-        background: url("../img/tiles/bgbeanies.gif");
+        background: url("../img/tiles/beanies.gif");
     }
 
     .blog-page .nav-toggle-label {
@@ -2405,7 +2421,7 @@ input:checked + .slider-windows95:before {
     }
 
     .guestbook-page .nav-toggle-label {
-        background: url("../img/tiles/bgrbow.jpg");
+        background: url("../img/tiles/rainbow.jpg");
     }
 
     /* Add icons to mobile menu button */
@@ -2455,7 +2471,7 @@ input:checked + .slider-windows95:before {
 
     /* Tablet-optimized ruled paper - use mobile background and no left margin */
     .bg-ruled-paper {
-        background-image: url("../img/tiles/ruledpaper_mobile.gif");
+        background-image: url("../img/tiles/ruled_paper_mobile.gif");
         background-size: 1600px 26px; /* Keep original dimensions */
         background-repeat: repeat-y;
         background-position: top left;
@@ -2465,7 +2481,7 @@ input:checked + .slider-windows95:before {
     }
 
     .bg-ruled-paper-header {
-        background-image: url("../img/tiles/ruledpaper-top_mobile.gif"); /* Use mobile header without red line */
+        background-image: url("../img/tiles/ruled_paper_top_mobile.gif"); /* Use mobile header without red line */
         background-size: 1600px auto; /* Keep original width, auto height */
         background-repeat: no-repeat;
         background-position: top left;
@@ -2542,7 +2558,7 @@ input:checked + .slider-windows95:before {
 
     /* Mobile-optimized ruled paper - use mobile background and no left margin */
     .bg-ruled-paper {
-        background-image: url("../img/tiles/ruledpaper_mobile.gif");
+        background-image: url("../img/tiles/ruled_paper_mobile.gif");
         background-size: 1600px 26px; /* Keep original dimensions */
         background-repeat: repeat-y;
         background-position: top left;
@@ -2552,7 +2568,7 @@ input:checked + .slider-windows95:before {
     }
 
     .bg-ruled-paper-header {
-        background-image: url("../img/tiles/ruledpaper-top_mobile.gif"); /* Use mobile header without red line */
+        background-image: url("../img/tiles/ruled_paper-top_mobile.gif"); /* Use mobile header without red line */
         background-size: 1600px auto; /* Keep original width, auto height */
         background-repeat: no-repeat;
         background-position: top left;
