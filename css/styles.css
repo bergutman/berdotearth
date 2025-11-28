@@ -734,9 +734,6 @@ h3 {
 .bg-bricks {
     background: url("../img/tiles/brick.jpg");
 }
-.bg-jesus-brick {
-    background: url("../img/tiles/jesus_brick.gif");
-}
 .bg-castle-defense {
     background:
         url("../img/clipart/castle_defense.gif") repeat-x,
@@ -746,9 +743,6 @@ h3 {
         top center;
     background-size: auto, contain;
     padding: 275px 0 0 0;
-}
-.bg-fabric-paper {
-    background: url("../img/tiles/fabric_paper.jpg");
 }
 .bg-runescape-ui {
     background: url("../img/clipart/runescape-interface.png");
@@ -768,9 +762,6 @@ h3 {
 }
 .bg-fantasy-paper {
     background: url("https://plaisance.neocities.org/bg/bg_flowertile.jpg");
-}
-.bg-fantasy-paper-plain {
-    background: url("../img/tiles/fantasy_paper.jpeg");
 }
 .bg-wizzard {
     background: url("../img/clipart/wizzard.gif");
@@ -806,26 +797,17 @@ h3 {
 .bg-wood-alt {
     background-image: url("../img/tiles/wood_alt.jpg");
 }
-.bg-mountain {
-    background-image: url("../img/tiles/mountain.gif");
-}
 .bg-matzo {
     background-image: url("../img/tiles/matzo.gif");
 }
 .bg-chinese {
     background-image: url("../img/tiles/chinese.gif");
 }
-.bg-jungle-paper {
-    background-image: url("../img/tiles/jungle_paper.gif");
-}
 .bg-jungle-animals {
     background-image: url("../img/clipart/bigpost.jpg");
 }
 .bg-shells {
     background: url("../img/tiles/shells.gif");
-}
-.bg-stars {
-    background: url("../img/tiles/stars.gif");
 }
 .bg-marijuana {
     background: url("../img/tiles/marijuana.gif");
@@ -878,9 +860,6 @@ h3 {
 .bg-brown-paper {
     background: url("../img/tiles/paper.jpg");
 }
-.bg-water-bright {
-    background: url("../img/tiles/water_bright.png");
-}
 .bg-beach-from-above {
     background:
         linear-gradient(rgba(0, 0, 51, 0.6), rgba(0, 0, 51, 0.6)),
@@ -909,9 +888,6 @@ h3 {
 .bg-shore {
     background: url("../img/tiles/shore.jpg");
     background-size: 100% 100%;
-}
-.bg-flag-paper {
-    background: url("../img/tiles/rainbow_paper.jpg");
 }
 .bg-water {
     background: url("../img/tiles/water.jpg");
@@ -956,9 +932,6 @@ h3 {
 }
 .bg-steel-cones {
     background: url("../img/tiles/steel_cones.gif");
-}
-.bg-hearts {
-    background: url("../img/tiles/hearts_small.gif");
 }
 .bg-beanie-babies {
     background: url("../img/tiles/beanies.gif");
@@ -1007,20 +980,11 @@ h3 {
 .bg-binary-swirl {
     background: url("../img/tiles/binary_swirl.jpg");
 }
-.bg-shark-tooth {
-    background: url("../img/tiles/shark_tooth.jpg");
-}
 .bg-green-palm {
     background: url("../img/tiles/palm.gif");
 }
-.bg-paper-leaf {
-    background: url("../img/tiles/leaf_paper.gif");
-}
 .bg-paper-flowers {
     background: url("../img/tiles/paper_flowers.jpg");
-}
-.bg-flower-field {
-    background: url("../img/tiles/flower_field.gif");
 }
 .bg-rainbow-clouds {
     background: url("../img/tiles/rainbow_clouds.gif");
@@ -1030,9 +994,6 @@ h3 {
 }
 .bg-smoke-blue {
     background: url("../img/tiles/blue_smoke.gif");
-}
-.bg-ethereal {
-    background: url("../img/tiles/ether.gif");
 }
 .bg-faded-clouds {
     background: url("../img/tiles/clouds_faded.jpg");
@@ -1060,12 +1021,6 @@ h3 {
 .bg-red-sky {
     background: url("../img/tiles/red_sky.jpg");
 }
-.bg-checkered-swirl {
-    background: url("../img/tiles/checkers_swirl.gif");
-}
-.bg-crystal {
-    background: url("../img/tiles/crystal.gif");
-}
 .bg-fire {
     background: url("../img/tiles/fire.jpg");
 }
@@ -1083,23 +1038,11 @@ h3 {
 .bg-okinawa {
     background: url("../img/tiles/okinawa.gif");
 }
-.bg-eagle {
-    background: url("../img/tiles/eagle.jpg");
-}
-.bg-flakes {
-    background: url("../img/tiles/flakes.gif");
-}
 .bg-rainbow {
     background: url("../img/tiles/rainbow_animated.gif");
 }
 .bg-clouds {
     background: url("../img/tiles/clouds.gif");
-}
-.bg-clouds-alt {
-    background: url("../img/tiles/clouds_alt.jpg");
-}
-.bg-crossing-man {
-    background: url("../img/tiles/crossing_man.gif");
 }
 .bg-purple-star {
     background: url("../img/tiles/purple_stars.gif");
