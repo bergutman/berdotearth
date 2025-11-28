@@ -13,19 +13,17 @@
 | ![blue_smoke.gif](img/tiles/blue_smoke.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![blue_swirl.jpg](img/tiles/blue_swirl.jpg) | [https://www.geocities.ws/ResearchTriangle/Lab/6510/bkg.html](https://www.geocities.ws/ResearchTriangle/Lab/6510/bkg.html) |
 | ![brick.jpg](img/tiles/brick.jpg) | [https://www.oocities.org/~ymjcath/img/htmlfram/Backgrnd.htm](https://www.oocities.org/~ymjcath/img/htmlfram/Backgrnd.htm) STONE -> "Lobby Wall" |
-| ![cardboard.jpg](img/tiles/cardboard.jpg) | |
+| ![cardboard.jpg](img/tiles/cardboard.jpg) | [https://www.freepik.com/free-photo/design-space-paper-textured-background_18665792.htm#fromView=search&page=1&position=5&uuid=ddcc7507-4003-4d61-9cf1-f330cd592242&query=Cork+board](https://www.freepik.com/free-photo/design-space-paper-textured-background_18665792.htm#fromView=search&page=1&position=5&uuid=ddcc7507-4003-4d61-9cf1-f330cd592242&query=Cork+board) |
 | ![cds.jpg](img/tiles/cds.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![chinese.gif](img/tiles/chinese.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![clouds.gif](img/tiles/clouds.gif) | [http://backgroundsarchive.com/tiles/sky.php](http://backgroundsarchive.com/tiles/sky.php) |
 | ![clouds_faded.jpg](img/tiles/clouds_faded.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![cloudy.jpg](img/tiles/cloudy.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
-| ![concha.gif](img/tiles/concha.gif) | |
 | ![dark_moon.gif](img/tiles/dark_moon.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![dolphins.jpg](img/tiles/dolphins.jpg) | [https://www.geocities.ws/dolphinstoday/image2.htm?utm_medium=organic&utm_source=yasmartcamera](https://www.geocities.ws/dolphinstoday/image2.htm?utm_medium=organic&utm_source=yasmartcamera) |
 | ![egypt.gif](img/tiles/egypt.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![eyeball.gif](img/tiles/eyeball.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![fallen.jpg](img/tiles/fallen.jpg) | [https://wendysgraphics1.tripod.com/bg2.html](https://wendysgraphics1.tripod.com/bg2.html) |
-| ![fancy_book.jpg](img/tiles/fancy_book.jpg) | |
 | ![feet.gif](img/tiles/feet.gif) | |
 | ![fern.gif](img/tiles/fern.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![fire.jpg](img/tiles/fire.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
