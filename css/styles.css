@@ -810,9 +810,6 @@ h3 {
 .bg-marijuana {
     background: url("../img/tiles/marijuana.gif");
 }
-.bg-flower-paper {
-    background: url("../img/tiles/flower_paper.jpg");
-}
 .bg-red-cross {
     background: url("../img/tiles/red_cross.jpg");
 }
@@ -917,9 +914,6 @@ h3 {
 }
 .bg-black-smoke {
     background: url("../img/tiles/black_smoke.jpg");
-}
-.bg-gold-bars {
-    background: url("../img/tiles/gold_bars.png");
 }
 .bg-steel-cones {
     background: url("../img/tiles/steel_cones.gif");

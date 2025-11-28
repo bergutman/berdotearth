@@ -24,12 +24,10 @@
 | ![egypt.gif](img/tiles/egypt.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![eyeball.gif](img/tiles/eyeball.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![fallen.jpg](img/tiles/fallen.jpg) | [https://wendysgraphics1.tripod.com/bg2.html](https://wendysgraphics1.tripod.com/bg2.html) |
-| ![feet.gif](img/tiles/feet.gif) | |
+| ![feet.gif](img/tiles/feet.gif) | [https://web.archive.org/web/20150509044840/http://www.wesleyworks.com/Icons/Wallpaper/](https://web.archive.org/web/20150509044840/http://www.wesleyworks.com/Icons/Wallpaper/) |
 | ![fern.gif](img/tiles/fern.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![fire.jpg](img/tiles/fire.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![floral.jpg](img/tiles/floral.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
-| ![flower_paper.jpg](img/tiles/flower_paper.jpg) | |
-| ![gold_bars.png](img/tiles/gold_bars.png) | |
 | ![grass.gif](img/tiles/grass.gif) | |
 | ![green_sand.jpg](img/tiles/green_sand.jpg) | |
 | ![grimace.gif](img/tiles/grimace.gif) | |
