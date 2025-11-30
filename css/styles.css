@@ -807,9 +807,6 @@ h3 {
 .bg-shells {
     background: url("../img/tiles/shells.gif");
 }
-.bg-marijuana {
-    background: url("../img/tiles/marijuana.gif");
-}
 .bg-red-cross {
     background: url("../img/tiles/red_cross.jpg");
 }
@@ -901,11 +898,6 @@ h3 {
     background-size: contain;
     background-repeat: repeat;
 }
-.bg-green-sand {
-    background: url("../img/tiles/green_sand.jpg");
-    background-size: contain;
-    background-repeat: repeat;
-}
 .bg-orchid {
     background: url("../img/tiles/orchid.jpg");
 }
@@ -944,9 +936,6 @@ h3 {
 .bg-rbow {
     background: url("../img/tiles/rainbow.jpg");
 }
-.bg-rbow-swirl {
-    background: url("../img/tiles/rainbow_smoke.gif");
-}
 .bg-dark-moon {
     background: url("../img/tiles/dark_moon.gif");
 }
@@ -967,9 +956,6 @@ h3 {
 }
 .bg-green-palm {
     background: url("../img/tiles/palm.gif");
-}
-.bg-paper-flowers {
-    background: url("../img/tiles/paper_flowers.jpg");
 }
 .bg-rainbow-clouds {
     background: url("../img/tiles/rainbow_clouds.gif");
@@ -1020,17 +1006,14 @@ h3 {
     background-size: 100% auto;
     background-position: bottom;
 }
-.bg-okinawa {
-    background: url("../img/tiles/okinawa.gif");
+.bg-geisha {
+    background: url("../img/tiles/geisha.jpg");
 }
 .bg-rainbow {
     background: url("../img/tiles/rainbow_animated.gif");
 }
 .bg-clouds {
     background: url("../img/tiles/clouds.gif");
-}
-.bg-purple-star {
-    background: url("../img/tiles/purple_stars.gif");
 }
 .bg-beer {
     background: url("../img/tiles/beer.jpg");

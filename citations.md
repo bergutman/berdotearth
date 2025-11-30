@@ -28,33 +28,28 @@
 | ![fern.gif](img/tiles/fern.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![fire.jpg](img/tiles/fire.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![floral.jpg](img/tiles/floral.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
-| ![grass.gif](img/tiles/grass.gif) | |
-| ![green_sand.jpg](img/tiles/green_sand.jpg) | |
-| ![grimace.gif](img/tiles/grimace.gif) | |
-| ![hello_kitty.jpg](img/tiles/hello_kitty.jpg) | |
-| ![island.jpg](img/tiles/island.jpg) | |
+| ![geisha.jpg](img/tiles/geisha.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
+| ![grass.gif](img/tiles/grass.gif) | [https://web.archive.org/web/20100828023331/http://www.pagemuffel.de/templatesa.html](https://web.archive.org/web/20100828023331/http://www.pagemuffel.de/templatesa.html) |
+| ![grimace.gif](img/tiles/grimace.gif) | [https://galaxygrimace.neocities.org/](https://galaxygrimace.neocities.org/) I could have sworn I found this photo of Grimace here, but now I can't find it... whoops lol  |
+| ![hello_kitty.jpg](img/tiles/hello_kitty.jpg) | [https://www.webweaver.nu/clipart/baby-backgrounds.shtml](https://www.webweaver.nu/clipart/baby-backgrounds.shtml) |
+| ![island.jpg](img/tiles/island.jpg) | [https://picsvan.blogspot.com/2012/07/garden-backgrounds-vol-11.html](https://picsvan.blogspot.com/2012/07/garden-backgrounds-vol-11.html) Last photo on this page. Refried the shit out of it in GIMP |
 | ![ivy.jpg](img/tiles/ivy.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
-| ![jesus.jpg](img/tiles/jesus.jpg) | |
+| ![jesus.jpg](img/tiles/jesus.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) I found the source image in the religious section. The addition of Clippy is a product of my own particular brand of brainrot.  |
 | ![jungle.jpg](img/tiles/jungle.jpg) | [https://defaultwallpaper.blogspot.com/2011/11/windows-98_06.html](https://defaultwallpaper.blogspot.com/2011/11/windows-98_06.html) |
 | ![leaves.gif](img/tiles/leaves.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![leaves_smoky.jpg](img/tiles/leaves_smoky.jpg) | [http://www.backgroundsarchive.com/tiles/sample.php?backgroundID=23](http://www.backgroundsarchive.com/tiles/sample.php?backgroundID=23) |
-| ![marijuana.gif](img/tiles/marijuana.gif) | |
-| ![matzo.gif](img/tiles/matzo.gif) | [pixelmoondust.neocities.org/archives/archivedtiles](pixelmoondust.neocities.org/archives/archivedtiles) |
-| ![okinawa.gif](img/tiles/okinawa.gif) | |
+| ![matzo.gif](img/tiles/matzo.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![orchid.jpg](img/tiles/orchid.jpg) | |
 | ![palm.gif](img/tiles/palm.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![panda.gif](img/tiles/panda.gif) | |
-| ![paper.jpg](img/tiles/paper.jpg) | [pixelmoondust.neocities.org/archives/archivedtiles](pixelmoondust.neocities.org/archives/archivedtiles) |
-| ![paper_flowers.jpg](img/tiles/paper_flowers.jpg) | |
+| ![paper.jpg](img/tiles/paper.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![paper_white.gif](img/tiles/paper_white.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![pines.gif](img/tiles/pines.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![polar_bear.gif](img/tiles/polar_bear.gif) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![purple.gif](img/tiles/purple.gif) | |
-| ![purple_stars.gif](img/tiles/purple_stars.gif) | |
 | ![rainbow.jpg](img/tiles/rainbow.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
-| ![rainbow_animated.gif](img/tiles/rainbow_animated.gif) | |
+| ![rainbow_animated.gif](img/tiles/rainbow_animated.gif) | [https://imgur.com/gallery/rainbow-DyPQHe2](https://imgur.com/gallery/rainbow-DyPQHe2) |
 | ![rainbow_clouds.gif](img/tiles/rainbow_clouds.gif) | [https://www.addglitter.com/graphics/backgrounds.asp](https://www.addglitter.com/graphics/backgrounds.asp) |
-| ![rainbow_smoke.gif](img/tiles/rainbow_smoke.gif) | |
 | ![red_cross.jpg](img/tiles/red_cross.jpg) | |
 | ![red_sky.jpg](img/tiles/red_sky.jpg) | |
 | ![rock.jpg](img/tiles/rock.jpg) | [http://backgroundsarchive.com/tiles/rocks.php](http://backgroundsarchive.com/tiles/rocks.php) |
