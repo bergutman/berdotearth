@@ -1,3 +1,49 @@
+# Clipart
+
+| Image | Citation / Source |
+|-------|------------------|
+| ![Advertise_Here.gif](img/clipart/Advertise_Here.gif) | |
+| ![badlaw.gif](img/clipart/badlaw.gif) | |
+| ![beaniebaby.gif](img/clipart/beaniebaby.gif) | |
+| ![bearring.gif](img/clipart/bearring.gif) | |
+| ![bearring2.gif](img/clipart/bearring2.gif) | |
+| ![camera.gif](img/clipart/camera.gif) | |
+| ![camera-webring.gif](img/clipart/camera-webring.gif) | |
+| ![castle_defense.gif](img/clipart/castle_defense.gif) | |
+| ![coolsite.gif](img/clipart/coolsite.gif) | |
+| ![dolphin2.gif](img/clipart/dolphin2.gif) | |
+| ![dolphinbeaniebaby.gif](img/clipart/dolphinbeaniebaby.gif) | |
+| ![fairyy8.gif](img/clipart/fairyy8.gif) | |
+| ![fantasy_paper.jpg](img/clipart/fantasy_paper.jpg) | |
+| ![fish1.gif](img/clipart/fish1.gif) | |
+| ![Fishswim.gif](img/clipart/Fishswim.gif) | |
+| ![freedom.gif](img/clipart/freedom.gif) | |
+| ![friend_on.gif](img/clipart/friend_on.gif) | |
+| ![gaypage.gif](img/clipart/gaypage.gif) | |
+| ![globe.gif](img/clipart/globe.gif) | |
+| ![gnome-child.png](img/clipart/gnome-child.png) | |
+| ![Inspection.jpg](img/clipart/Inspection.jpg) | |
+| ![jewishweb.gif](img/clipart/jewishweb.gif) | |
+| ![LOGOANIM.GIF](img/clipart/LOGOANIM.GIF) | |
+| ![medieval.jpeg](img/clipart/medieval.jpeg) | |
+| ![mezuzah.gif](img/clipart/mezuzah.gif) | |
+| ![montypython.gif](img/clipart/montypython.gif) | |
+| ![nowar.jpg](img/clipart/nowar.jpg) | |
+| ![progressive-webring.gif](img/clipart/progressive-webring.gif) | |
+| ![pythhead.gif](img/clipart/pythhead.gif) | |
+| ![recycle.gif](img/clipart/recycle.gif) | |
+| ![shalom.gif](img/clipart/shalom.gif) | |
+| ![SHIRT.GIF](img/clipart/SHIRT.GIF) | |
+| ![sod.gif](img/clipart/sod.gif) | |
+| ![SSMSAward1.gif](img/clipart/SSMSAward1.gif) | |
+| ![tape.png](img/clipart/tape.png) | |
+| ![TCQSawrd.gif](img/clipart/TCQSawrd.gif) | |
+| ![threeddolphins.gif](img/clipart/threeddolphins.gif) | |
+| ![toocool1.jpg](img/clipart/toocool1.jpg) | |
+| ![welcome.gif](img/clipart/welcome.gif) | |
+| ![wizzard.gif](img/clipart/wizzard.gif) | |
+| ![yo-draw.gif](img/clipart/yo-draw.gif) | |
+
 # Tiles
 
 | Image | Citation / Source |
