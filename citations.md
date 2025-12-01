@@ -2,30 +2,30 @@
 
 | Image | Citation / Source |
 |-------|------------------|
-| ![Advertise_Here.gif](img/clipart/Advertise_Here.gif) | |
+| ![Advertise_Here.gif](img/clipart/Advertise_Here.gif) | [https://web.archive.org/web/20091025211017/http://geocities.com/jetsticker/LI_Surf_Home.htm](https://web.archive.org/web/20091025211017/http://geocities.com/jetsticker/LI_Surf_Home.htm) |
 | ![badlaw.gif](img/clipart/badlaw.gif) | |
-| ![beaniebaby.gif](img/clipart/beaniebaby.gif) | |
-| ![bearring.gif](img/clipart/bearring.gif) | |
+| ![beaniebaby.gif](img/clipart/beaniebaby.gif) | [https://thebeanienews.com/bns2005.html](https://thebeanienews.com/bns2005.html) |
+| ![bearring.gif](img/clipart/bearring.gif) | [https://web.archive.org/web/20070701115757/http://www.geocities.com/WestHollywood/Cafe/4338/gifs/bearringlogo.gif](https://web.archive.org/web/20070701115757/http://www.geocities.com/WestHollywood/Cafe/4338/gifs/bearringlogo.gif) |
 | ![bearring2.gif](img/clipart/bearring2.gif) | |
-| ![camera.gif](img/clipart/camera.gif) | |
-| ![camera-webring.gif](img/clipart/camera-webring.gif) | |
+| ![camera.gif](img/clipart/camera.gif) | [https://web.archive.org/web/20000828134045/http://www.geocities.com:80/Hollywood/Guild/4876/camera.gif](https://web.archive.org/web/20000828134045/http://www.geocities.com:80/Hollywood/Guild/4876/camera.gif) |
+| ![camera-webring.gif](img/clipart/camera-webring.gif) | [https://web.archive.org/web/20090730023701/http://geocities.com/Athens/4516/index2.html](https://web.archive.org/web/20090730023701/http://geocities.com/Athens/4516/index2.html) |
 | ![castle_defense.gif](img/clipart/castle_defense.gif) | |
-| ![coolsite.gif](img/clipart/coolsite.gif) | |
+| ![coolsite.gif](img/clipart/coolsite.gif) | [http://www.mathcats.com/awards.html](http://www.mathcats.com/awards.html) |
 | ![dolphin2.gif](img/clipart/dolphin2.gif) | |
 | ![dolphinbeaniebaby.gif](img/clipart/dolphinbeaniebaby.gif) | |
-| ![fairyy8.gif](img/clipart/fairyy8.gif) | |
-| ![fantasy_paper.jpg](img/clipart/fantasy_paper.jpg) | |
+| ![fairyy8.gif](img/clipart/fairyy8.gif) | [https://www.qsl.net/vu2sdu/friend.html](https://www.qsl.net/vu2sdu/friend.html) |
+| ![fantasy_paper.jpg](img/clipart/fantasy_paper.jpg) | [https://github.com/htck/bayeux/blob/master/htck/app/content/images/backgrounds/background_1.jpg](https://github.com/htck/bayeux/blob/master/htck/app/content/images/backgrounds/background_1.jpg) |
 | ![fish1.gif](img/clipart/fish1.gif) | |
 | ![Fishswim.gif](img/clipart/Fishswim.gif) | |
 | ![freedom.gif](img/clipart/freedom.gif) | |
 | ![friend_on.gif](img/clipart/friend_on.gif) | |
 | ![gaypage.gif](img/clipart/gaypage.gif) | |
 | ![globe.gif](img/clipart/globe.gif) | |
-| ![gnome-child.png](img/clipart/gnome-child.png) | |
+| ![gnome-child.png](img/clipart/gnome-child.png) | [https://www.pngfind.com/mpng/iwwhom_gnome-child-png-dank-elf-transparent-png/](https://www.pngfind.com/mpng/iwwhom_gnome-child-png-dank-elf-transparent-png/) |
 | ![Inspection.jpg](img/clipart/Inspection.jpg) | |
 | ![jewishweb.gif](img/clipart/jewishweb.gif) | |
 | ![LOGOANIM.GIF](img/clipart/LOGOANIM.GIF) | |
-| ![medieval.jpeg](img/clipart/medieval.jpeg) | |
+| ![medieval.jpeg](img/clipart/medieval.jpeg) | [https://imgur.com/gallery/medieval-manuscript-wallpapers-pWP3xo4](https://imgur.com/gallery/medieval-manuscript-wallpapers-pWP3xo4) |
 | ![mezuzah.gif](img/clipart/mezuzah.gif) | |
 | ![montypython.gif](img/clipart/montypython.gif) | |
 | ![nowar.jpg](img/clipart/nowar.jpg) | |
@@ -40,9 +40,9 @@
 | ![TCQSawrd.gif](img/clipart/TCQSawrd.gif) | |
 | ![threeddolphins.gif](img/clipart/threeddolphins.gif) | |
 | ![toocool1.jpg](img/clipart/toocool1.jpg) | |
-| ![welcome.gif](img/clipart/welcome.gif) | |
-| ![wizzard.gif](img/clipart/wizzard.gif) | |
-| ![yo-draw.gif](img/clipart/yo-draw.gif) | |
+| ![welcome.gif](img/clipart/welcome.gif) | [https://web.archive.org/web/20090903065405/http://geocities.com/yiyovilly/](https://web.archive.org/web/20090903065405/http://geocities.com/yiyovilly/) |
+| ![wizzard.gif](img/clipart/wizzard.gif) | [https://web.archive.org/web/20130521194408/http://webspace.webring.com/people/pw/wiggle/](https://web.archive.org/web/20130521194408/http://webspace.webring.com/people/pw/wiggle/) |
+| ![yo-draw.gif](img/clipart/yo-draw.gif) | [https://web.archive.org/web/20090805071803/http://geocities.com/Tokyo/Bay/2475/hlesson8.html](https://web.archive.org/web/20090805071803/http://geocities.com/Tokyo/Bay/2475/hlesson8.html) |
 
 # Tiles
 
