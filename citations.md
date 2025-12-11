@@ -126,3 +126,28 @@
 | ![waterfall.jpg](img/tiles/waterfall.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![wood.jpg](img/tiles/wood.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
 | ![wood_alt.jpg](img/tiles/wood_alt.jpg) | [https://pixelmoondust.neocities.org/archives/archivedtiles](https://pixelmoondust.neocities.org/archives/archivedtiles) |
+
+# Cursors
+| Image | Citation / Source |
+|-------|------------------|
+| ![surf.cur](img/cursors/surf.cur) | [https://www.cursors-4u.com/cursor/2012/02/02/beach-design-surfboard.html](https://www.cursors-4u.com/cursor/2012/02/02/beach-design-surfboard.html) |
+| ![surf-pointer.png](img/cursors/surf-pointer.png) | [https://www.cursors-4u.com/cursor/2008/11/08/flashy-stars-2-2.html](https://www.cursors-4u.com/cursor/2008/11/08/flashy-stars-2-2.html) |
+| ![jewish.cur](img/cursors/jewish.cur) | [https://www.cursors-4u.com/cursor/2005/08/29/sym98.html](https://www.cursors-4u.com/cursor/2005/08/29/sym98.html) |
+| ![jewish-pointer.cur](img/cursors/jewish-pointer.cur) | [https://www.cursors-4u.com/cursor/2009/10/03/ten-commandments.html](https://www.cursors-4u.com/cursor/2009/10/03/ten-commandments.html) |
+| ![teddy.png](img/cursors/teddy.png) | [https://www.cursors-4u.com/cursor/2006/02/14/hol148.html](https://www.cursors-4u.com/cursor/2006/02/14/hol148.html) |
+| ![kiss-me.png](img/cursors/kiss-me.png) | [https://www.cursors-4u.com/cursor/2018/02/17/kiss-me-sweethearts.html](https://www.cursors-4u.com/cursor/2018/02/17/kiss-me-sweethearts.html) |
+| ![cigarette.png](img/cursors/cigarette.png) | [https://www.cursors-4u.com/cursor/2005/05/17/oth3-11.html](https://www.cursors-4u.com/cursor/2005/05/17/oth3-11.html) |
+| ![beer.cur](img/cursors/beer.cur) | [https://www.cursors-4u.com/cursor/2006/03/04/foo108.html](https://www.cursors-4u.com/cursor/2006/03/04/foo108.html) |
+| ![gauntlet.cur](img/cursors/gauntlet.cur) | [https://www.cursors-4u.com/cursor/2008/12/22/world-of-warcraft-wow-hand-armor.html](https://www.cursors-4u.com/cursor/2008/12/22/world-of-warcraft-wow-hand-armor.html) |
+| ![gauntlet-pointer.cur](img/cursors/gauntlet-pointer.cur) | [https://www.cursors-4u.com/cursor/2008/12/22/world-of-warcraft-wow-glowing-hand-armor.html](https://www.cursors-4u.com/cursor/2008/12/22/world-of-warcraft-wow-glowing-hand-armor.html) |
+| ![spam.cur](img/cursorsspam.cur) | [https://www.cursors-4u.com/cursor/2012/02/09/spam.html](https://www.cursors-4u.com/cursor/2012/02/09/spam.html)  |
+| ![free.cur](img/cursors/free.cur) | [https://www.cursors-4u.com/cursor/2009/04/28/free-2.html](https://www.cursors-4u.com/cursor/2009/04/28/free-2.html) |
+| ![download.png](img/cursors/download.png) | [https://www.cursors-4u.com/cursor/2005/08/10/oth39.html](https://www.cursors-4u.com/cursor/2005/08/10/oth39.html) |
+| ![japan.cur](img/cursors/japan.cur) | [https://www.cursors-4u.com/cursor/2012/01/18/green-tea.html](https://www.cursors-4u.com/cursor/2012/01/18/green-tea.html) |
+| ![onepiece.gif](img/cursors/onepiece.png) | [https://www.cursors-4u.com/cursor/2012/01/01/one-piece-going-merry.html](https://www.cursors-4u.com/cursor/2012/01/01/one-piece-going-merry.html) |
+| ![naruto.png](img/cursors/naruto.png) | [https://www.cursors-4u.com/cursor/2010/09/04/animated-spinning-kunai-naruto.html](https://www.cursors-4u.com/cursor/2010/09/04/animated-spinning-kunai-naruto.html) |
+| ![deathnote.cur](img/cursors/deathnote.cur) | [https://www.cursors-4u.com/cursor/2009/02/04/l-lawliet-death-note.html](https://www.cursors-4u.com/cursor/2009/02/04/l-lawliet-death-note.html) |
+| ![aot.cur](img/cursors/aot.cur) | [https://www.rw-designer.com/cursor-detail/83326](https://www.rw-designer.com/cursor-detail/83326) |
+| ![neongenesis.cur](img/cursors/neongenesis.cur) | [https://www.cursors-4u.com/cursor/2009/05/02/rei-ayanami.html](https://www.cursors-4u.com/cursor/2009/05/02/rei-ayanami.html) |
+| ![garbage.cur](img/cursors/garbage.cur) | [https://www.cursors-4u.com/cursor/2009/01/28/sakura-haruno-naruto-2.html](https://www.cursors-4u.com/cursor/2009/01/28/sakura-haruno-naruto-2.html) |
+| ![dbz.cur](img/cursors/dbz.cur) | [https://www.cursors-4u.com/cursor/2008/12/16/dragonball-z-piccolo-2.html](https://www.cursors-4u.com/cursor/2008/12/16/dragonball-z-piccolo-2.html)|

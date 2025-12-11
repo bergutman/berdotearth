@@ -2118,6 +2118,292 @@ input:checked + .slider-windows95:before {
 }
 
 /* ==========================================================================
+   10. Custom Cursors
+   ========================================================================== */
+
+.cursor-index {
+    cursor: url("../img/cursors/surf.cur"), auto;
+}
+
+nav .cursor-index a:hover,
+.cursor-index button:hover,
+.cursor-index input:hover,
+.cursor-index [role="button"]:hover,
+.cursor-index [onclick]:hover,
+.cursor-index .image-expand-label:hover {
+    cursor: url("../img/cursors/surf.cur"), pointer;
+}
+
+.cursor-surf {
+    cursor: url("../img/cursors/surf.cur"), auto;
+}
+
+.cursor-surf a:hover,
+.cursor-surf button:hover,
+.cursor-surf input:hover,
+.cursor-surf [role="button"]:hover,
+.cursor-surf [onclick]:hover,
+.cursor-surf .image-expand-label:hover {
+    cursor: url("../img/cursors/surf-pointer.png"), pointer;
+}
+
+.cursor-free {
+    cursor: url("../img/cursors/free.cur"), auto;
+}
+
+.cursor-free a:hover,
+.cursor-free button:hover,
+.cursor-free input:hover,
+.cursor-free [role="button"]:hover,
+.cursor-free [onclick]:hover,
+.cursor-free .image-expand-label:hover {
+    cursor: url("../img/cursors/free.cur"), pointer;
+}
+
+.cursor-download {
+    cursor: url("../img/cursors/download.png"), auto;
+}
+
+.cursor-download a:hover,
+.cursor-download button:hover,
+.cursor-download input:hover,
+.cursor-download [role="button"]:hover,
+.cursor-download [onclick]:hover,
+.cursor-download .image-expand-label:hover {
+    cursor: url("../img/cursors/download.png"), pointer;
+}
+
+.cursor-pics {
+    cursor: url("../img/cursors/teddy.png"), auto;
+}
+
+nav .cursor-pics a:hover,
+.cursor-pics button:hover,
+.cursor-pics input:hover,
+.cursor-pics [role="button"]:hover,
+.cursor-pics [onclick]:hover,
+.cursor-pics .image-expand-label:hover {
+    cursor: url("../img/cursors/teddy.png"), pointer;
+}
+
+.cursor-teddy {
+    cursor: url("../img/cursors/teddy.png"), auto;
+}
+
+.cursor-teddy a:hover,
+.cursor-teddy button:hover,
+.cursor-teddy input:hover,
+.cursor-teddy [role="button"]:hover,
+.cursor-teddy [onclick]:hover,
+.cursor-teddy .image-expand-label:hover {
+    cursor: url("../img/cursors/kiss-me.png"), pointer;
+}
+
+.cursor-bio {
+    cursor: url("../img/cursors/jewish.cur"), auto;
+}
+
+nav .cursor-bio a:hover,
+.cursor-bio button:hover,
+.cursor-bio input:hover,
+.cursor-bio [role="button"]:hover,
+.cursor-bio [onclick]:hover,
+.cursor-bio .image-expand-label:hover {
+    cursor: url("../img/cursors/jewish.cur"), pointer;
+}
+
+.cursor-jewish {
+    cursor: url("../img/cursors/jewish.cur"), auto;
+}
+
+.cursor-jewish a:hover,
+.cursor-jewish button:hover,
+.cursor-jewish input:hover,
+.cursor-jewish [role="button"]:hover,
+.cursor-jewish [onclick]:hover,
+.cursor-jewish .image-expand-label:hover {
+    cursor: url("../img/cursors/jewish-pointer.cur"), pointer;
+}
+
+.cursor-blog {
+    cursor: url("../img/cursors/cigarette.png"), auto;
+}
+
+nav .cursor-blog a:hover,
+.cursor-blog button:hover,
+.cursor-blog input:hover,
+.cursor-blog [role="button"]:hover,
+.cursor-blog [onclick]:hover,
+.cursor-blog .image-expand-label:hover {
+    cursor: url("../img/cursors/cigarette.png"), pointer;
+}
+
+.cursor-cigarette {
+    cursor: url("../img/cursors/cigarette.png"), auto;
+}
+
+.cursor-cigarette a:hover,
+.cursor-cigarette button:hover,
+.cursor-cigarette input:hover,
+.cursor-cigarette [role="button"]:hover,
+.cursor-cigarette [onclick]:hover,
+.cursor-cigarette .image-expand-label:hover {
+    cursor: url("../img/cursors/beer.cur"), pointer;
+}
+
+.cursor-guestbook {
+    cursor: url("../img/cursors/gauntlet.cur"), auto;
+}
+
+nav .cursor-guestbook a:hover,
+.cursor-guestbook button:hover,
+.cursor-guestbook input:hover,
+.cursor-guestbook [role="button"]:hover,
+.cursor-guestbook [onclick]:hover,
+.cursor-guestbook .image-expand-label:hover {
+    cursor: url("../img/cursors/gauntlet.cur"), pointer;
+}
+
+.cursor-gauntlet {
+    cursor: url("../img/cursors/gauntlet.cur"), auto;
+}
+
+.cursor-gauntlet a:hover,
+.cursor-gauntlet button:hover,
+.cursor-gauntlet input:hover,
+.cursor-gauntlet [role="button"]:hover,
+.cursor-gauntlet [onclick]:hover,
+.cursor-gauntlet .image-expand-label:hover {
+    cursor: url("../img/cursors/gauntlet-pointer.cur"), pointer;
+}
+
+.cursor-spam {
+    cursor: url("../img/cursors/spam.cur"), auto;
+}
+
+.cursor-spam a:hover,
+.cursor-spam button:hover,
+.cursor-spam input:hover,
+.cursor-spam textarea:hover,
+.cursor-spam [role="button"]:hover,
+.cursor-spam [onclick]:hover,
+.cursor-spam .image-expand-label:hover {
+    cursor: url("../img/cursors/spam.cur"), pointer;
+}
+
+.cursor-japan {
+    cursor: url("../img/cursors/japan.cur"), auto;
+}
+
+.cursor-japan a:hover,
+.cursor-japan button:hover,
+.cursor-japan input:hover,
+.cursor-japan textarea:hover,
+.cursor-japan [role="button"]:hover,
+.cursor-japan [onclick]:hover,
+.cursor-japan .image-expand-label:hover {
+    cursor: url("../img/cursors/japan.cur"), pointer;
+}
+
+.cursor-onepiece {
+    cursor: url("../img/cursors/onepiece.gif"), auto;
+}
+
+.cursor-onepiece a:hover,
+.cursor-onepiece button:hover,
+.cursor-onepiece input:hover,
+.cursor-onepiece textarea:hover,
+.cursor-onepiece [role="button"]:hover,
+.cursor-onepiece [onclick]:hover,
+.cursor-onepiece .image-expand-label:hover {
+    cursor: url("../img/cursors/onepiece.gif"), pointer;
+}
+
+.cursor-naruto {
+    cursor: url("../img/cursors/naruto.png"), auto;
+}
+
+.cursor-naruto a:hover,
+.cursor-naruto button:hover,
+.cursor-naruto input:hover,
+.cursor-naruto textarea:hover,
+.cursor-naruto [role="button"]:hover,
+.cursor-naruto [onclick]:hover,
+.cursor-naruto .image-expand-label:hover {
+    cursor: url("../img/cursors/naruto.png"), pointer;
+}
+
+.cursor-deathnote {
+    cursor: url("../img/cursors/deathnote.cur"), auto;
+}
+
+.cursor-deathnote a:hover,
+.cursor-deathnote button:hover,
+.cursor-deathnote input:hover,
+.cursor-deathnote textarea:hover,
+.cursor-deathnote [role="button"]:hover,
+.cursor-deathnote [onclick]:hover,
+.cursor-deathnote .image-expand-label:hover {
+    cursor: url("../img/cursors/deathnote.cur"), pointer;
+}
+
+.cursor-aot {
+    cursor: url("../img/cursors/aot.cur"), auto;
+}
+
+.cursor-aot a:hover,
+.cursor-aot button:hover,
+.cursor-aot input:hover,
+.cursor-aot textarea:hover,
+.cursor-aot [role="button"]:hover,
+.cursor-aot [onclick]:hover,
+.cursor-aot .image-expand-label:hover {
+    cursor: url("../img/cursors/aot.cur"), pointer;
+}
+
+.cursor-neongenesis {
+    cursor: url("../img/cursors/neongenesis.cur"), auto;
+}
+
+.cursor-neongenesis a:hover,
+.cursor-neongenesis button:hover,
+.cursor-neongenesis input:hover,
+.cursor-neongenesis textarea:hover,
+.cursor-neongenesis [role="button"]:hover,
+.cursor-neongenesis [onclick]:hover,
+.cursor-neongenesis .image-expand-label:hover {
+    cursor: url("../img/cursors/neongenesis.cur"), pointer;
+}
+
+.cursor-garbage {
+    cursor: url("../img/cursors/garbage.cur"), auto;
+}
+
+.cursor-garbage a:hover,
+.cursor-garbage button:hover,
+.cursor-garbage input:hover,
+.cursor-garbage textarea:hover,
+.cursor-garbage [role="button"]:hover,
+.cursor-garbage [onclick]:hover,
+.cursor-garbage .image-expand-label:hover {
+    cursor: url("../img/cursors/garbage.cur"), pointer;
+}
+
+.cursor-dbz {
+    cursor: url("../img/cursors/dbz.cur"), auto;
+}
+
+.cursor-dbz a:hover,
+.cursor-dbz button:hover,
+.cursor-dbz input:hover,
+.cursor-dbz textarea:hover,
+.cursor-dbz [role="button"]:hover,
+.cursor-dbz [onclick]:hover,
+.cursor-dbz .image-expand-label:hover {
+    cursor: url("../img/cursors/dbz.cur"), pointer;
+}
+
+/* ==========================================================================
    11. Media Queries
    ========================================================================== */
 
