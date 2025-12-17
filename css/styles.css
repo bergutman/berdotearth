@@ -1618,7 +1618,6 @@ nav a:hover {
 
 .counter {
     padding: 5px;
-    color: var(--background-black);
     font-family: "Courier New", monospace;
     text-align: center;
     font-weight: bold;
