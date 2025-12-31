@@ -849,6 +849,11 @@ h3 {
 .bg-blue-swirl {
     background: url("../img/tiles/blue_swirl.jpg");
 }
+
+.bg-blue-swirl a,
+.bg-blue-swirl p a {
+    color: var(--sun-yellow) !important;
+}
 .bg-brown-paper {
     background: url("../img/tiles/paper.jpg");
 }
@@ -2617,7 +2622,7 @@ nav .cursor-guestbook a:hover,
     }
 
     .guestbook-page .nav-toggle-label {
-        background: url("../img/tiles/rainbow.jpg");
+        background: url("../img/tiles/scroll.jpg");
     }
 
     /* Add icons to mobile menu button */
