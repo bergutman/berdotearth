@@ -1594,10 +1594,10 @@ nav a:hover {
 
 /* Transform Classes */
 .tilted {
-    transform: rotate(1deg);
+    transform: rotate(5deg);
 }
 .tilted-reverse {
-    transform: rotate(-1deg);
+    transform: rotate(-5deg);
 }
 .polaroid {
     min-height: 375px;
